@@ -59,6 +59,7 @@ insert into equivalence values("cs2120","CompSci022",2,"Dec 10, 2018");
 insert into equivalence values("cs0020","CompSci022",2,"Sep 17, 1999");
 select * from equivalence;
 update equivalence set dateDecided = 'September 19, 2018' where courseNumber = 'cs0020' and courseCode = 'CompSci022';
+select * from equivalence;
 
 /* Update years for intro courses */
 select * from outsideCourses;
