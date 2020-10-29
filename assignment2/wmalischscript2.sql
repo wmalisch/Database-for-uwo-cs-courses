@@ -17,11 +17,11 @@ select * from westernCourses;
 insert into westernCourses values("cs1026", "Computer Science Fundamentals I", 0.5, "A/B");
 insert into westernCourses values("cs1027", "Computer Science Fundamentals II", 0.5, "A/B");
 insert into westernCourses values("cs2210", "Algorithms and Data Structures", 1.0, "A/B");
-insert into westernCourses values("cs3319", "Databases I", 0.5, , "A/B");
-insert into westernCourses values("cs2120", "Modern Survival Skills I: Coding Essentials", 0.5, , "A/B");
+insert into westernCourses values("cs3319", "Databases I", 0.5, "A/B");
+insert into westernCourses values("cs2120", "Modern Survival Skills I: Coding Essentials", 0.5, "A/B");
 insert into westernCourses values("cs4490", "Thesis", 0.5, "Z");
 insert into westernCourses values("cs0020", "Intro to Coding using Pascal and Fortran", 1.0, "");
-insert into westernCourses values("cs1028","CS from a non coding POV, Networks, DB, Hardware & more",1.0,"");
+insert into westernCourses values("cs1028","Intro to CS, Networks, DB, Hardware & more",1.0,"");
 select * from westernCourses;
 
 /* Insert into outsideCourses */
@@ -40,8 +40,8 @@ insert into outsideCourses values("CompSci333", "Graphics", 3, 0.5,55);
 insert into outsideCourses values("CompSci444", "Networks", 4, 0.5,55);
 insert into outsideCourses values("CompSci022", "Using Packages", 1, 0.5,77);
 insert into outsideCourses values("CompSci101", "Introduction to Using Data Structures", 2, 0.5,77);
-insert into outsideCourses values("CompSci1000","Basics on Networks, OS, Databases",1,1.0,99);
-insert into outsideCourses values("CompSci4420","Parallel Processing",4,0.5,99);
+insert into outsideCourses values("CompSci100","Basics on Networks, OS, Databases",1,1.0,99);
+insert into outsideCourses values("CompSci442","Parallel Processing",4,0.5,99);
 select * from outsideCourses;
 
 /* Insert and update into equivalence */
