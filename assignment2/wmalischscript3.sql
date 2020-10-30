@@ -1,3 +1,6 @@
+show databases;
+use wmalischassign2db;
+
 /* Query 1 */
 select courseName from westernCourses;
 
