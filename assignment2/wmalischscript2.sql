@@ -48,17 +48,17 @@ select * from outsideCourses;
 select * from equivalence;
 insert into equivalence values("cs1026","CompSci022",2,"May 12, 2015");
 insert into equivalence values("cs1026","CompSci033",2,"Jan 2, 2013");
-insert into equivalence values("cs1026","CompSci011",77,"Feb  9, 1997");
-insert into equivalence values("cs1026","CompSci021",66,"Jan 12, 2010");
-insert into equivalence values("cs1027","CompSci023",2,"Jun 22, 2017");
-insert into equivalence values("cs1027","CompSci022",66,"Sep 1, 2019");
-insert into equivalence values("cs2210","CompSci101",77,"Jul 12, 1998");
-insert into equivalence values("cs3319","CompSci222",2,"Sep 13, 1990");
-insert into equivalence values("cs3319","CompSci319",66,"Sep 21, 1987");
-insert into equivalence values("cs2120","CompSci022",2,"Dec 10, 2018");
-insert into equivalence values("cs0020","CompSci022",2,"Sep 17, 1999");
+insert into equivalence values("cs1026","CompSci011",77,"1997-02-09");
+insert into equivalence values("cs1026","CompSci021",66,"2010-01-12");
+insert into equivalence values("cs1027","CompSci023",2,"2017-06-22");
+insert into equivalence values("cs1027","CompSci022",66,"2019-09-01");
+insert into equivalence values("cs2210","CompSci101",77,"1998-07-12");
+insert into equivalence values("cs3319","CompSci222",2,"1990-09-13");
+insert into equivalence values("cs3319","CompSci319",66,"1987-09-21");
+insert into equivalence values("cs2120","CompSci022",2,"2018-12-10");
+insert into equivalence values("cs0020","CompSci022",2,"1999-09-17");
 select * from equivalence;
-update equivalence set dateDecided = 'September 19, 2018' where courseNumber = 'cs0020' and courseCode = 'CompSci022';
+update equivalence set dateDecided = '2018-09-19' where courseNumber = 'cs0020' and courseCode = 'CompSci022';
 select * from equivalence;
 
 /* Update years for intro courses */
