@@ -16,7 +16,6 @@ create view firstYearView
 
 -- Show view works */
 select * from firstYearView;
-select * from firstYearView where nickname = 'UofT' ;
 select * from firstYearView where nickname = 'UofT' order by "Western Course Name" ASC;
 
 -- I was having some troubles with the order by clause on aliases, so I also did this view.
@@ -32,10 +31,9 @@ create view firstYearViewLessAlias
     and university.uniId = equivalence.uniId 
     and outsideCourses.year = '1';
 select * from firstYearViewLessAlias;
-select * from firstYearViewLessAlias where nickname = 'UofT' ;
 select * from firstYearViewLessAlias where nickname = 'UofT' order by courseName ASC;
 
---Show university data, delete and show it worked
+-- Show university data, delete and show it worked
 select * from university;
 delete from university where nickname like '%cord%';
 select * from university;
@@ -50,4 +48,5 @@ select * from outsideCourses as C inner join university as U on C.uniId = U.uniI
 delete from outsideCourses where uniId in (select uniId from university where city = 'Waterloo');
 select * from outsideCourses as C inner join university as U on C.uniId = U.uniId;
 
-
+-- test view has less tuples
+select * from firstYearView;
