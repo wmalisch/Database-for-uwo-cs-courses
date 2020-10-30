@@ -17,7 +17,13 @@ select courseCode, courseName from outsideCourses, university where outsideCours
 select courseName, nickname from outsideCourses, university where outsideCourses.uniId = university.uniId and outsideCourses.courseName like '%Introduction%';
 
 /* Query 7 */
-
+-- COME BACK TO THIS ONE, FOR SOME REASON DISPLAYING 4 COURSES WHEN IT SHOULD DISPLAY 5
+select outsideCourses.courseName, officialName, westernCourses.courseName, dateDecided 
+    from outsideCourses, westernCourses, university, equivalence 
+    where westernCourses.courseNumber = equivalence.courseNumber 
+    and outsideCourses.courseCode = equivalence.courseCode
+    and outsideCourses.uniId = equivalence.uniId and university.uniId = equivalence.uniId 
+    and dateDecided <= date_sub(curdate(), interval 5 year); 
 
 /* Query 8 */
 /* Query 9 */

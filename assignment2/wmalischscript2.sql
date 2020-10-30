@@ -46,9 +46,9 @@ select * from outsideCourses;
 
 /* Insert and update into equivalence */
 select * from equivalence;
-insert into equivalence values("cs1026","CompSci022",2,"May 12, 2015");
-insert into equivalence values("cs1026","CompSci033",2,"Jan 2, 2013");
-insert into equivalence values("cs1026","CompSci011",77,"1997-02-09");
+insert into equivalence values("cs1026","CompSci022",2,"2015-05-12");
+insert into equivalence values("cs1026","CompSci033",2,"2013-01-02");
+insert into equivalence values("cs1026","CompSci011",4,"1997-02-09");
 insert into equivalence values("cs1026","CompSci021",66,"2010-01-12");
 insert into equivalence values("cs1027","CompSci023",2,"2017-06-22");
 insert into equivalence values("cs1027","CompSci022",66,"2019-09-01");
