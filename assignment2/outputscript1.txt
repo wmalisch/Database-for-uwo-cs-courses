@@ -1,0 +1,104 @@
+Warning: Using a password on the command line interface can be insecure.
+--------------
+show databases
+--------------
+
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| myfirstdb          |
+| mysql              |
+| performance_schema |
+| vetoffice          |
+| wmalischassign2db  |
++--------------------+
+6 rows in set (0.00 sec)
+
+--------------
+drop database wmalischassign2db
+--------------
+
+Query OK, 4 rows affected (0.09 sec)
+
+--------------
+create database wmalischassign2db
+--------------
+
+Query OK, 1 row affected (0.00 sec)
+
+--------------
+GRANT USAGE ON *.* TO 'ta'@'localhost'
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+DROP USER 'ta'@'localhost'
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+CREATE USER 'ta'@'localhost' IDENTIFIED BY 'cs3319'
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+GRANT ALL PRIVILEGES ON wmalischassign2db.* TO 'ta'@'localhost'
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+FLUSH PRIVILEGES
+--------------
+
+Query OK, 0 rows affected (0.00 sec)
+
+--------------
+show tables
+--------------
+
+Empty set (0.00 sec)
+
+--------------
+create table university(uniId int not null, officialName varchar(50) not null, city varchar(20) not null, provinceCode char(2) not null, nickname varchar(20) not null, primary key(uniId))
+--------------
+
+Query OK, 0 rows affected (0.04 sec)
+
+--------------
+create table westernCourses(courseNumber char(6) not null, courseName varchar(50) not null, weight float not null, suffix varchar(3), primary key(courseNumber))
+--------------
+
+Query OK, 0 rows affected (0.04 sec)
+
+--------------
+create table outsideCourses(courseCode char(10) not null, courseName varchar(50), year int, weight float, uniId int not null, primary key(courseCode, uniId), foreign key(uniId) references university(uniId) on delete cascade)
+--------------
+
+Query OK, 0 rows affected (0.05 sec)
+
+--------------
+create table equivalence(courseNumber char(6) not null, courseCode char(10) not null, uniId int not null, dateDecided varchar(18) not null, primary key(courseNumber,courseCode,uniId), foreign key(courseNumber) references westernCourses(courseNumber) on delete cascade, foreign key(courseCode) references outsideCourses(courseCode) on delete cascade, foreign key(uniId) references university(uniId))
+--------------
+
+Query OK, 0 rows affected (0.05 sec)
+
+--------------
+show tables
+--------------
+
++-----------------------------+
+| Tables_in_wmalischassign2db |
++-----------------------------+
+| equivalence                 |
+| outsideCourses              |
+| university                  |
+| westernCourses              |
++-----------------------------+
+4 rows in set (0.00 sec)
+
+Bye

@@ -1,0 +1,395 @@
+Warning: Using a password on the command line interface can be insecure.
+--------------
+show tables
+--------------
+
++-----------------------------+
+| Tables_in_wmalischassign2db |
++-----------------------------+
+| equivalence                 |
+| outsideCourses              |
+| university                  |
+| westernCourses              |
++-----------------------------+
+4 rows in set (0.00 sec)
+
+--------------
+select * from university
+--------------
+
+Empty set (0.00 sec)
+
+--------------
+load data local infile './udata.csv'
+into table university
+fields terminated by ','
+lines terminated by '\n'
+--------------
+
+Query OK, 7 rows affected (0.00 sec)
+Records: 7  Deleted: 0  Skipped: 0  Warnings: 0
+
+--------------
+insert into university values(99,"University of the great one","Edmonton","AB","Gretzky")
+--------------
+
+Query OK, 1 row affected (0.01 sec)
+
+--------------
+select * from university
+--------------
+
++-------+--------------------------------+-----------+--------------+----------+
+| uniId | officialName                   | city      | provinceCode | nickname |
++-------+--------------------------------+-----------+--------------+----------+
+|     2 | University Of Toronto          | Toronto   | ON           | UofT     |
+|     4 | University of Waterloo         | Waterloo  | ON           | Waterloo |
+|    24 | Concordia University           | Montreal  | QB           | Concord  |
+|    55 | McMaster University            | Hamilton  | ON           | Mac      |
+|    66 | University of British Columbia | Vancouver | BC           | UBC      |
+|    77 | Wilfred Laurier University     | Waterloo  | ON           | Laurier  |
+|    88 | McGill University              | Montreal  | QB           | McGill   |
+|    99 | University of the great one    | Edmonton  | AB           | Gretzky  |
++-------+--------------------------------+-----------+--------------+----------+
+8 rows in set (0.00 sec)
+
+--------------
+select * from westernCourses
+--------------
+
+Empty set (0.00 sec)
+
+--------------
+insert into westernCourses values("cs1026", "Computer Science Fundamentals I", 0.5, "A/B")
+--------------
+
+Query OK, 1 row affected (0.01 sec)
+
+--------------
+insert into westernCourses values("cs1027", "Computer Science Fundamentals II", 0.5, "A/B")
+--------------
+
+Query OK, 1 row affected (0.00 sec)
+
+--------------
+insert into westernCourses values("cs2210", "Algorithms and Data Structures", 1.0, "A/B")
+--------------
+
+Query OK, 1 row affected (0.01 sec)
+
+ERROR 1064 (42000) at line 20: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' "A/B")' at line 1
+ERROR 1064 (42000) at line 21: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' "A/B")' at line 1
+--------------
+insert into westernCourses values("cs3319", "Databases I", 0.5, , "A/B")
+--------------
+
+--------------
+insert into westernCourses values("cs2120", "Modern Survival Skills I: Coding Essentials", 0.5, , "A/B")
+--------------
+
+--------------
+insert into westernCourses values("cs4490", "Thesis", 0.5, "Z")
+--------------
+
+Query OK, 1 row affected (0.00 sec)
+
+--------------
+insert into westernCourses values("cs0020", "Intro to Coding using Pascal and Fortran", 1.0, "")
+--------------
+
+Query OK, 1 row affected (0.01 sec)
+
+ERROR 1406 (22001) at line 24: Data too long for column 'courseName' at row 1
+--------------
+insert into westernCourses values("cs1028","CS from a non coding POV, Networks, DB, Hardware & more",1.0,"")
+--------------
+
+--------------
+select * from westernCourses
+--------------
+
++--------------+------------------------------------------+--------+--------+
+| courseNumber | courseName                               | weight | suffix |
++--------------+------------------------------------------+--------+--------+
+| cs0020       | Intro to Coding using Pascal and Fortran |      1 |        |
+| cs1026       | Computer Science Fundamentals I          |    0.5 | A/B    |
+| cs1027       | Computer Science Fundamentals II         |    0.5 | A/B    |
+| cs2210       | Algorithms and Data Structures           |      1 | A/B    |
+| cs4490       | Thesis                                   |    0.5 | Z      |
++--------------+------------------------------------------+--------+--------+
+5 rows in set (0.00 sec)
+
+--------------
+select * from outsideCourses
+--------------
+
+Empty set (0.00 sec)
+
+--------------
+insert into outsideCourses values("CompSci022", "Introduction to Programming", 1, 0.5, 2)
+--------------
+
+Query OK, 1 row affected (0.00 sec)
+
+--------------
+insert into outsideCourses values("CompSci033", "Intro to Programming for Med students", 3, 0.5, 2)
+--------------
+
+Query OK, 1 row affected (0.01 sec)
+
+--------------
+insert into outsideCourses values("CompSci021", "Packages", 1, 0.5,2)
+--------------
+
+Query OK, 1 row affected (0.00 sec)
+
+--------------
+insert into outsideCourses values("CompSci222", "Introduction to Databases", 2, 1.0,2)
+--------------
+
+Query OK, 1 row affected (0.01 sec)
+
+--------------
+insert into outsideCourses values("CompSci023", "Advanced Programming", 1, 0.5,2)
+--------------
+
+Query OK, 1 row affected (0.00 sec)
+
+--------------
+insert into outsideCourses values("CompSci011", "Intro to Computer Science", 2, 0.5,4)
+--------------
+
+Query OK, 1 row affected (0.00 sec)
+
+--------------
+insert into outsideCourses values("CompSci123", "Using UNIX", 2, 0.5,4)
+--------------
+
+Query OK, 1 row affected (0.01 sec)
+
+--------------
+insert into outsideCourses values("CompSci021", "Intro Programming", 1, 1.0,66)
+--------------
+
+Query OK, 1 row affected (0.01 sec)
+
+--------------
+insert into outsideCourses values("CompSci022", "Advanced Programming", 1, 0.5,66)
+--------------
+
+Query OK, 1 row affected (0.00 sec)
+
+--------------
+insert into outsideCourses values("CompSci319", "Using Databases", 3, 0.5,66)
+--------------
+
+Query OK, 1 row affected (0.01 sec)
+
+--------------
+insert into outsideCourses values("CompSci333", "Graphics", 3, 0.5,55)
+--------------
+
+Query OK, 1 row affected (0.00 sec)
+
+--------------
+insert into outsideCourses values("CompSci444", "Networks", 4, 0.5,55)
+--------------
+
+Query OK, 1 row affected (0.01 sec)
+
+--------------
+insert into outsideCourses values("CompSci022", "Using Packages", 1, 0.5,77)
+--------------
+
+Query OK, 1 row affected (0.00 sec)
+
+--------------
+insert into outsideCourses values("CompSci101", "Introduction to Using Data Structures", 2, 0.5,77)
+--------------
+
+Query OK, 1 row affected (0.01 sec)
+
+ERROR 1406 (22001) at line 43: Data too long for column 'courseCode' at row 1
+ERROR 1406 (22001) at line 44: Data too long for column 'courseCode' at row 1
+--------------
+insert into outsideCourses values("CompSci1000","Basics on Networks, OS, Databases",1,1.0,99)
+--------------
+
+--------------
+insert into outsideCourses values("CompSci4420","Parallel Processing",4,0.5,99)
+--------------
+
+--------------
+select * from outsideCourses
+--------------
+
++------------+---------------------------------------+------+--------+-------+
+| courseCode | courseName                            | year | weight | uniId |
++------------+---------------------------------------+------+--------+-------+
+| CompSci011 | Intro to Computer Science             |    2 |    0.5 |     4 |
+| CompSci021 | Packages                              |    1 |    0.5 |     2 |
+| CompSci021 | Intro Programming                     |    1 |      1 |    66 |
+| CompSci022 | Introduction to Programming           |    1 |    0.5 |     2 |
+| CompSci022 | Advanced Programming                  |    1 |    0.5 |    66 |
+| CompSci022 | Using Packages                        |    1 |    0.5 |    77 |
+| CompSci023 | Advanced Programming                  |    1 |    0.5 |     2 |
+| CompSci033 | Intro to Programming for Med students |    3 |    0.5 |     2 |
+| CompSci101 | Introduction to Using Data Structures |    2 |    0.5 |    77 |
+| CompSci123 | Using UNIX                            |    2 |    0.5 |     4 |
+| CompSci222 | Introduction to Databases             |    2 |      1 |     2 |
+| CompSci319 | Using Databases                       |    3 |    0.5 |    66 |
+| CompSci333 | Graphics                              |    3 |    0.5 |    55 |
+| CompSci444 | Networks                              |    4 |    0.5 |    55 |
++------------+---------------------------------------+------+--------+-------+
+14 rows in set (0.00 sec)
+
+--------------
+select * from equivalence
+--------------
+
+Empty set (0.00 sec)
+
+--------------
+insert into equivalence values("cs1026","CompSci022",2,"May 12, 2015")
+--------------
+
+Query OK, 1 row affected (0.00 sec)
+
+--------------
+insert into equivalence values("cs1026","CompSci033",2,"Jan 2, 2013")
+--------------
+
+Query OK, 1 row affected (0.01 sec)
+
+--------------
+insert into equivalence values("cs1026","CompSci011",77,"Feb  9, 1997")
+--------------
+
+Query OK, 1 row affected (0.02 sec)
+
+--------------
+insert into equivalence values("cs1026","CompSci021",66,"Jan 12, 2010")
+--------------
+
+Query OK, 1 row affected (0.00 sec)
+
+--------------
+insert into equivalence values("cs1027","CompSci023",2,"Jun 22, 2017")
+--------------
+
+Query OK, 1 row affected (0.01 sec)
+
+--------------
+insert into equivalence values("cs1027","CompSci022",66,"Sep 1, 2019")
+--------------
+
+Query OK, 1 row affected (0.09 sec)
+
+--------------
+insert into equivalence values("cs2210","CompSci101",77,"Jul 12, 1998")
+--------------
+
+Query OK, 1 row affected (0.01 sec)
+
+ERROR 1452 (23000) at line 56: Cannot add or update a child row: a foreign key constraint fails (`wmalischassign2db`.`equivalence`, CONSTRAINT `equivalence_ibfk_1` FOREIGN KEY (`courseNumber`) REFERENCES `westernCourses` (`courseNumber`) ON DELETE CASCADE)
+ERROR 1452 (23000) at line 57: Cannot add or update a child row: a foreign key constraint fails (`wmalischassign2db`.`equivalence`, CONSTRAINT `equivalence_ibfk_1` FOREIGN KEY (`courseNumber`) REFERENCES `westernCourses` (`courseNumber`) ON DELETE CASCADE)
+ERROR 1452 (23000) at line 58: Cannot add or update a child row: a foreign key constraint fails (`wmalischassign2db`.`equivalence`, CONSTRAINT `equivalence_ibfk_1` FOREIGN KEY (`courseNumber`) REFERENCES `westernCourses` (`courseNumber`) ON DELETE CASCADE)
+--------------
+insert into equivalence values("cs3319","CompSci222",2,"Sep 13, 1990")
+--------------
+
+--------------
+insert into equivalence values("cs3319","CompSci319",66,"Sep 21, 1987")
+--------------
+
+--------------
+insert into equivalence values("cs2120","CompSci022",2,"Dec 10, 2018")
+--------------
+
+--------------
+insert into equivalence values("cs0020","CompSci022",2,"Sep 17, 1999")
+--------------
+
+Query OK, 1 row affected (0.01 sec)
+
+--------------
+select * from equivalence
+--------------
+
++--------------+------------+-------+--------------+
+| courseNumber | courseCode | uniId | dateDecided  |
++--------------+------------+-------+--------------+
+| cs0020       | CompSci022 |     2 | Sep 17, 1999 |
+| cs1026       | CompSci011 |    77 | Feb  9, 1997 |
+| cs1026       | CompSci021 |    66 | Jan 12, 2010 |
+| cs1026       | CompSci022 |     2 | May 12, 2015 |
+| cs1026       | CompSci033 |     2 | Jan 2, 2013  |
+| cs1027       | CompSci022 |    66 | Sep 1, 2019  |
+| cs1027       | CompSci023 |     2 | Jun 22, 2017 |
+| cs2210       | CompSci101 |    77 | Jul 12, 1998 |
++--------------+------------+-------+--------------+
+8 rows in set (0.00 sec)
+
+--------------
+update equivalence set dateDecided = 'September 19, 2018' where courseNumber = 'cs0020' and courseCode = 'CompSci022'
+--------------
+
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+--------------
+select * from outsideCourses
+--------------
+
++------------+---------------------------------------+------+--------+-------+
+| courseCode | courseName                            | year | weight | uniId |
++------------+---------------------------------------+------+--------+-------+
+| CompSci011 | Intro to Computer Science             |    2 |    0.5 |     4 |
+| CompSci021 | Packages                              |    1 |    0.5 |     2 |
+| CompSci021 | Intro Programming                     |    1 |      1 |    66 |
+| CompSci022 | Introduction to Programming           |    1 |    0.5 |     2 |
+| CompSci022 | Advanced Programming                  |    1 |    0.5 |    66 |
+| CompSci022 | Using Packages                        |    1 |    0.5 |    77 |
+| CompSci023 | Advanced Programming                  |    1 |    0.5 |     2 |
+| CompSci033 | Intro to Programming for Med students |    3 |    0.5 |     2 |
+| CompSci101 | Introduction to Using Data Structures |    2 |    0.5 |    77 |
+| CompSci123 | Using UNIX                            |    2 |    0.5 |     4 |
+| CompSci222 | Introduction to Databases             |    2 |      1 |     2 |
+| CompSci319 | Using Databases                       |    3 |    0.5 |    66 |
+| CompSci333 | Graphics                              |    3 |    0.5 |    55 |
+| CompSci444 | Networks                              |    4 |    0.5 |    55 |
++------------+---------------------------------------+------+--------+-------+
+14 rows in set (0.00 sec)
+
+--------------
+update outsideCourses set year='1' where (select left(courseName, 5)) = 'Intro'
+--------------
+
+Query OK, 4 rows affected (0.13 sec)
+Rows matched: 6  Changed: 4  Warnings: 0
+
+--------------
+select * from outsideCourses
+--------------
+
++------------+---------------------------------------+------+--------+-------+
+| courseCode | courseName                            | year | weight | uniId |
++------------+---------------------------------------+------+--------+-------+
+| CompSci011 | Intro to Computer Science             |    1 |    0.5 |     4 |
+| CompSci021 | Packages                              |    1 |    0.5 |     2 |
+| CompSci021 | Intro Programming                     |    1 |      1 |    66 |
+| CompSci022 | Introduction to Programming           |    1 |    0.5 |     2 |
+| CompSci022 | Advanced Programming                  |    1 |    0.5 |    66 |
+| CompSci022 | Using Packages                        |    1 |    0.5 |    77 |
+| CompSci023 | Advanced Programming                  |    1 |    0.5 |     2 |
+| CompSci033 | Intro to Programming for Med students |    1 |    0.5 |     2 |
+| CompSci101 | Introduction to Using Data Structures |    1 |    0.5 |    77 |
+| CompSci123 | Using UNIX                            |    2 |    0.5 |     4 |
+| CompSci222 | Introduction to Databases             |    1 |      1 |     2 |
+| CompSci319 | Using Databases                       |    3 |    0.5 |    66 |
+| CompSci333 | Graphics                              |    3 |    0.5 |    55 |
+| CompSci444 | Networks                              |    4 |    0.5 |    55 |
++------------+---------------------------------------+------+--------+-------+
+14 rows in set (0.00 sec)
+
+Bye
