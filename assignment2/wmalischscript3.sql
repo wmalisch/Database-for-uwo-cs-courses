@@ -28,7 +28,7 @@ select outsideCourses.courseName, officialName, westernCourses.courseName, dateD
     and dateDecided <= date_sub(curdate(), interval 5 year); 
 
 /* Query 8 */
-select courseName, nickname, from equivalence, university, outsideCourses
+select courseName, nickname from equivalence, university, outsideCourses
     where courseNumber = 'cs1026'
     and equivalence.courseCode = outsideCourses.courseCode
     and equivalence.uniId = outsideCourses.uniId
@@ -48,7 +48,7 @@ select westernCourses.courseName, outsideCourses.courseName, nickname
     and university.city = 'Waterloo';
 
 /* Query 11 */
-select officialName from University
+select officialName from university
     where uniId not in 
     (select uniId from equivalence);
 
