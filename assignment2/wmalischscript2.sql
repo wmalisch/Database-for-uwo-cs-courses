@@ -1,9 +1,9 @@
-/* Use the database for this assign, and set up */
+-- Use the database for this assign, and set up */
 use wmalischassign2db;
 show tables;
 
 
-/* Bulk load into university table */
+-- Bulk load into university table */
 select * from university;
 load data local infile './udata.csv'
 into table university
@@ -12,7 +12,7 @@ lines terminated by '\n';
 insert into university values(99,"University of the great one","Edmonton","AB","Gretzky");
 select * from university;
 
-/* Insert into westernCourses */
+-- Insert into westernCourses */
 select * from westernCourses;
 insert into westernCourses values("cs1026", "Computer Science Fundamentals I", 0.5, "A/B");
 insert into westernCourses values("cs1027", "Computer Science Fundamentals II", 0.5, "A/B");
@@ -24,7 +24,7 @@ insert into westernCourses values("cs0020", "Intro to Coding using Pascal and Fo
 insert into westernCourses values("cs1028","Intro to CS, Networks, DB, Hardware & more",1.0,"");
 select * from westernCourses;
 
-/* Insert into outsideCourses */
+-- Insert into outsideCourses */
 select * from outsideCourses;
 insert into outsideCourses values("CompSci022", "Introduction to Programming", 1, 0.5, 2);
 insert into outsideCourses values("CompSci033", "Intro to Programming for Med students", 3, 0.5, 2);
@@ -44,7 +44,7 @@ insert into outsideCourses values("CompSci100","Basics on Networks, OS, Database
 insert into outsideCourses values("CompSci442","Parallel Processing",4,0.5,99);
 select * from outsideCourses;
 
-/* Insert and update into equivalence */
+-- Insert and update into equivalence */
 select * from equivalence;
 insert into equivalence values("cs1026","CompSci022",2,"2015-05-12");
 insert into equivalence values("cs1026","CompSci033",2,"2013-01-02");
@@ -61,7 +61,7 @@ select * from equivalence;
 update equivalence set dateDecided = '2018-09-19' where courseNumber = 'cs0020' and courseCode = 'CompSci022';
 select * from equivalence;
 
-/* Update years for intro courses */
+-- Update years for intro courses */
 select * from outsideCourses;
 update outsideCourses set year='1' where (select left(courseName, 5)) = 'Intro';
 select * from outsideCourses;
