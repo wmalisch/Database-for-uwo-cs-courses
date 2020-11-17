@@ -1,4 +1,3 @@
-
 <?php
    $query = "SELECT * FROM owner";
    $result = mysqli_query($connection,$query);

@@ -20,6 +20,7 @@ include 'connectdb.php';
     while ($row=mysqli_fetch_assoc($result)) {
         echo '<li>';
         echo $row["petname"];
+        echo '<img src="' . $row["petpicture"] . '" height="60" width="60">';
      }
      mysqli_free_result($result);
 ?>
