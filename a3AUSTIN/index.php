@@ -3,8 +3,12 @@
 <head>
     <meta charset="utf-8">
     <title>UWO CS Courses & Equivalences</title>
+
 </head>
 <body>
+    <?php
+        include 'connectdb.php'
+    ?>
     <h1>UWO CS Courses & Equivalencies</h1>
     <h3>
         Welcome to the UWO course and course equivalence page. Here you will be able to find<br>
@@ -12,6 +16,7 @@
         universities information, and information on course equivalences between UWO and other <br>
         universities.<br>
     </h3>
+
 
 </body>
 </html>
