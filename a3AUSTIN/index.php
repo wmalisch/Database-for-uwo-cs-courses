@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>UWO Courses & Equivalences</title>
+    <meta charset="utf-8">
+    <title>UWO CS Courses & Equivalences</title>
 </head>
 <body>
-<h1>Welcome to UWO course equivalence page</h1>
-<h2>This is the php index</h2>
+    <h1>UWO CS Courses & Equivalencies</h1>
+    <h3>
+        Welcome to the UWO course and course equivalence page. Here you will be able to find<br>
+        all information regarding current UWO CS Courses, other universities CS courses, other <br>
+        universities information, and information on course equivalences between UWO and other <br>
+        universities.<br>
+    </h3>
+
 </body>
 </html>
