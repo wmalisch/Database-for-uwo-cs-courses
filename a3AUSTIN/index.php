@@ -17,12 +17,6 @@
     <form action="getuwocourses.php" method ="post">
         <input type="submit" value="Get UWO Courses">
     </form>
-    <form action="getuwocourses.php" method ="post">
-        <input type="button" value="Get Universities">
-    </form>
-    <form action="getuwocourses.php" method ="post">
-        <input type="button" value="Get Equivalent Coures's">
-    </form>
     <?php
         mysqli_close($connection);
     ?>

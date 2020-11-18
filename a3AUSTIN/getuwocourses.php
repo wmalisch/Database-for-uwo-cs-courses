@@ -1,8 +1,3 @@
-<?php
-    header('Home: '.$index.php);
-    header('Location: '.$getuwocourses.php);
-    die();
-?>
 <!DOCTYPE html>
 <html>
 <head>
