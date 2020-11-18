@@ -9,7 +9,7 @@
         include 'connectdb.php'
     ?>
     <h1>UWO Computer Science</h1>
-    <h2>Universities</h2>
+    <h2>University's</h2>
     <?php
         $query = "SELECT * FROM university";
         $result = mysqli_query($connection, $query);
@@ -18,7 +18,8 @@
         }
         while($row = mysqli_fetch_assoc($result)){
             echo "<li>";
-            echo $row[]
+            echo $row["uniId"] . " " . $row["officialName"] . " " . $row["city"] . " " . $row["provinceCode"] . " " . $row["nickname"];
+            echo "</li>";
         }
     ?>
     <?php
