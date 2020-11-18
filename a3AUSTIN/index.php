@@ -15,7 +15,7 @@
         Here you can take a look at UWO courses, other universities, and the other universities courses<br>
     </h3>
     <form action="getuwocourses.php" method ="post">
-        <input type="button" value="Get UWO Courses">
+        <input type="submit" value="Get UWO Courses">
     </form>
     <form action="getuwocourses.php" method ="post">
         <input type="button" value="Get Universities">
