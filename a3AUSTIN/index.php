@@ -17,7 +17,7 @@
     <form action="getuwocourses.php" method ="post">
         <input type="submit" value="Get UWO Courses">
     </form>
-    <form action="getuniversities.php" method ="post">
+    <form action="getuniversitys.php" method ="post">
         <input type="submit" value="Get University's">
     </form>
     <?php
