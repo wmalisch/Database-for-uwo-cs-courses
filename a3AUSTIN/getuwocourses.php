@@ -8,8 +8,8 @@
     <?php
         include 'connectdb.php'
     ?>
-    <h1>UWO Courses</h1>
-    <h2>UWO CS Courses & Equivalencies</h2>
+    <h1>UWO Computer Science</h1>
+    <h2>UWO Courses</h2>
     <?php
         $query = "SELECT * FROM westernCourses";
         $result = mysqli_query($connection, $query);

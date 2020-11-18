@@ -17,6 +17,9 @@
     <form action="getuwocourses.php" method ="post">
         <input type="submit" value="Get UWO Courses">
     </form>
+    <form action="getuniversities.php" method ="post">
+        <input type="submit" value="Get UWO Courses">
+    </form>
     <?php
         mysqli_close($connection);
     ?>
