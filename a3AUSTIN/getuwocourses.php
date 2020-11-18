@@ -10,6 +10,9 @@
     <title>UWO COURSES</title>
 </head>
 <body>
+    <?php
+        include 'connectdb.php'
+    ?>
     <h1>UWO Courses</h1>
     <h2>UWO CS Courses & Equivalencies</h2>
     <?php
@@ -23,6 +26,9 @@
             echo $row["courseNumber"] . " " . $row["courseName"] . " " . $row["weight"] . " " . $row["suffix"] . "</li>";
         }
         mysqli_free_result($result);
+    ?>
+    <?php
+        mysqli_close($connection);
     ?>
 </body>
 </html>
