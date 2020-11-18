@@ -14,10 +14,7 @@
         Here you can take a look at UWO courses, other universities, and the other universities courses<br>
     </h3>
     <form action="getuwocourses.php" method ="post">
-        <?php
-            include "getuwocourses.php";
-        ?>
-        <input type="button" value="Get UWO Courses">
+        <input type="submit" value="Get UWO Courses">
     </form>
     <?php
         mysqli_close($connection);
