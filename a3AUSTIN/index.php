@@ -17,7 +17,7 @@
         <?php
             include "getuwocourses.php";
         ?>
-        <input type="submit" value="Get UWO Courses">
+        <input type="button" value="Get UWO Courses">
     </form>
     <?php
         mysqli_close($connection);
