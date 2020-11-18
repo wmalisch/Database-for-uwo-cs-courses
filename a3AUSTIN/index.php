@@ -16,18 +16,14 @@
         universities information, and information on course equivalences between UWO and other <br>
         universities.<br>
     </h3>
-    <select>
+    <form action="getuwocourses.php" method ="post">
         <?php
-            include getuwocourses.php;
+            include "getuwocourse.php";
         ?>
-        View UWO Courses
-        <option value="1">All Courses</option>
-        <option value="2">By Date</option>
-        <option value="3">By Course Name</option>
-        <?php
-            include getuwocourses.php;
-        ?>
-    </select>
-
+        <input type="submit" value="Get UWO Courses">
+    </form>
+    <?php
+        mysqli_close($connection);
+    ?>
 </body>
 </html>
