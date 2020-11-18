@@ -1,8 +1,4 @@
-<?php
-    header('Home: '.$index.php);
-    header('UWO Courses: '.$getuwocourses.php);
-    die();
-?>
+
     
 <!DOCTYPE html>
 <html>
