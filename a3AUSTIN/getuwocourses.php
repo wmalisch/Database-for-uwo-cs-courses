@@ -6,7 +6,7 @@
     }
     while($row = mysqli_fetch_assoc($result)){
         echo "<li>";
-        echo $row["courseNumber"] . " "  "</li>";
+        echo $row["courseNumber"] . " " . "</li>";
     }
     mysqli_free_result($result);
 ?>
