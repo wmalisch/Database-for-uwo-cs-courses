@@ -37,7 +37,7 @@
             <option value='Y'>Y</option>
             <option value='Z'>Z</option>
             <option value=''></option>
-        </select><br><br>"l
+        </select><br><br>";
     echo "<input type='submit' value='Click here to finalize edit'>";
     echo "</form>";
 ?>
