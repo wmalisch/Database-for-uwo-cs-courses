@@ -28,8 +28,8 @@
             echo "<td>" . $row["courseName"] . "</td>";
             echo "<td>" . $row["weight"] . "</td>";
             echo "<td>" . $row["suffix"] . "</td>";
-            echo "<td>" . "<input type='button' value='" . $row["courseNumber"] . "'>" . "</td>"
-            echo "<td>" . "<input type='button' value='" . $row["courseNumber"] . "'>" . "</td>"
+            echo "<td>" . "<input type='button' value='" . $row["courseNumber"] . "'>" . "</td>";
+            echo "<td>" . "<input type='button' value='" . $row["courseNumber"] . "'>" . "</td>";
             echo "</tr>";
         }
         echo "</table>";
