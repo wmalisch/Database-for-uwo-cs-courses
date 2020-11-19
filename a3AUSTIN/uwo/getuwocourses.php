@@ -14,7 +14,6 @@
     ?>
     <hr>
     <?php
-        echo "<script src='sortTable.js'></script>";
         $query = "SELECT * FROM westernCourses";
         $result = mysqli_query($connection, $query);
         if(!result){

@@ -9,10 +9,10 @@ function prepareListener() {
     headerName = document.getElementById('hname');
 
     headerNum.addEventListener("click", check_direction(0));
-    headerName.addEventListener("click",check_direction_name(1));
+    headerName.addEventListener("click",check_direction(1));
 }
 
-function check_direction_num(n) {
+function check_direction(n) {
     var table, rows, a, b;
     table = document.getElementById('table');
     rows = table.rows;
