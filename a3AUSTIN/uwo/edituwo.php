@@ -12,7 +12,13 @@
     $name = $_POST["courseName"];
     $weight = $_POST["weight"];
     $suffix = $_POST["suffix"];
-    echo "<li>" . $number . "</li>"
+    $query = "UPDATE westernCourses SET courseName='$name', weight='$weight', suffix='$suffix' WHERE courseNumber='$number';"; 
+    if(!mysqli_query($connection,$query)){
+        die("Error while trying to update UWO course " . mysqli_error($connection));
+    }else{
+        header('Location: ../index.php');
+        exit;
+    }
 ?>
 </body>
 </html>
