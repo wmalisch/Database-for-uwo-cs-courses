@@ -18,7 +18,7 @@
             die("Database query failed");
         }
         while($row = mysqli_fetch_assoc($result)){
-            echo "<table style="width:60%">";
+            echo "<table style='width:60%'>";
             echo "<tr><th>Course Number</th><th>Course Name</th><th>Course Weight</th><th>Course Suffix</th></tr>";
             echo "<tr>";
             echo "<td>" . $row["courseNumber"] . "</td>";
