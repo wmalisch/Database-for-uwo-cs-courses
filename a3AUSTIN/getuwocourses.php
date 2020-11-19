@@ -18,13 +18,18 @@
             die("Database query failed");
         }
         echo "<table style='width:100%'>";
-        echo "<tr><th>Course Number</th><th>Course Name</th><th>Course Weight</th><th>Course Suffix</th></tr>";    
+        echo "<tr>";
+        echo "<th>Course Number</th><th>Course Name</th><th>Course Weight</th><th>Course Suffix</th>";
+        echo "<th>Edit</th><th>Delete</th>";
+        echo "</tr>";    
         while($row = mysqli_fetch_assoc($result)){
             echo "<tr>";
             echo "<td>" . $row["courseNumber"] . "</td>";
             echo "<td>" . $row["courseName"] . "</td>";
             echo "<td>" . $row["weight"] . "</td>";
             echo "<td>" . $row["suffix"] . "</td>";
+            echo "<td>" . "<input type='button' value='" . $row["courseNumber"] . "'>" . "</td>"
+            echo "<td>" . "<input type='button' value='" . $row["courseNumber"] . "'>" . "</td>"
             echo "</tr>";
         }
         echo "</table>";
