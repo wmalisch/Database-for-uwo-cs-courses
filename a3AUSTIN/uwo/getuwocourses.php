@@ -3,6 +3,7 @@
 <head>
     <meta charset='utf-8'>
     <title>UWO COURSES</title>
+    <script src="sortTable.js"></script>
 </head>
 <body>
     <h1>UWO Computer Science</h1>
@@ -20,7 +21,10 @@
         }
         echo "<table style='width:100%' id='table'>";
         echo "<tr>";
-        echo "<th>Course Number</th><th>Course Name</th><th>Course Weight</th><th>Course Suffix</th>";
+        echo "<th id='hnumber'>Course Number</th>";
+        echo "<th id='hname'>Course Name</th>";
+        echo "<th>Course Weight</th>";
+        echo "<th>Course Suffix</th>";
         echo "<th>Edit</th><th>Delete</th>";
         echo "</tr>";    
         while($row = mysqli_fetch_assoc($result)){
