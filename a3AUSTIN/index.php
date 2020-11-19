@@ -7,8 +7,8 @@
 </head>
 <body>
     <?php
-    
-        include 'connectdb.php'
+        include 'header.php';
+        include 'connectdb.php';
     ?>
     <h1>Home Page</h1>
     <h2>UWO CS Courses & Equivalencies</h2>
