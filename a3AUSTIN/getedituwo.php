@@ -15,7 +15,7 @@
 <?php
     $course = $_POST["courseNumber"];
     $query = "SELECT * FROM westernCourses WHERE courseNumber=$course";
-    $result = mysqli_query($connection,$query);
+    $result = mysqli_query($connection, $query);
     if(!result){
         die("database query failed");
     }
