@@ -6,12 +6,12 @@
 
 </head>
 <body>
+    <h1>Home Page</h1>
+    <h2>UWO CS Courses & Equivalencies</h2>
     <?php
         include 'header.php';
         include 'connectdb.php';
     ?>
-    <h1>Home Page</h1>
-    <h2>UWO CS Courses & Equivalencies</h2>
     <h3>
         Here you can take a look at UWO courses, other universities, and the other universities courses<br>
     </h3>

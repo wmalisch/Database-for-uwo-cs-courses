@@ -5,11 +5,12 @@
     <title>UNIVERSITY'S</title>
 </head>
 <body>
-    <?php
-        include 'connectdb.php'
-    ?>
     <h1>UWO Computer Science</h1>
     <h2>University's</h2>
+    <?php
+        include 'header.php';
+        include 'connectdb.php';
+    ?>
     <?php
         $query = "SELECT * FROM university";
         $result = mysqli_query($connection, $query);

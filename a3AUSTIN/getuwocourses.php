@@ -5,11 +5,12 @@
     <title>UWO COURSES</title>
 </head>
 <body>
-    <?php
-        include 'connectdb.php'
-    ?>
     <h1>UWO Computer Science</h1>
     <h2>UWO Courses</h2>
+    <?php
+        include 'header.php';
+        include 'connectdb.php';
+    ?>
     <?php
         $query = "SELECT * FROM westernCourses";
         $result = mysqli_query($connection, $query);
@@ -17,8 +18,16 @@
             die("Database query failed");
         }
         while($row = mysqli_fetch_assoc($result)){
-            echo "<li>";
-            echo $row["courseNumber"] . " " . $row["courseName"] . " " . $row["weight"] . " " . $row["suffix"] . "</li>";
+            echo "<table style="width:60%">";
+            echo "<tr><th>Course Number</th><th>Course Name</th><th>Course Weight</th><th>Course Suffix</th></tr>";
+            echo "<tr>";
+            echo "<td>" . $row["courseNumber"] . "</td>";
+            echo "<td>" . $row["courseName"] . "</td>";
+            echo "<td>" . $row["weight"] . "</td>";
+            echo "<td>" . $row["suffix"] . "</td>";
+            echo "</tr>";
+            echo "</table>";
+            
         }
         mysqli_free_result($result);
     ?>
