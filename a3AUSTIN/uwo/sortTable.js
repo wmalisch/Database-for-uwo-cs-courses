@@ -47,8 +47,8 @@ function sort_asc_number() {
         rows = table.rows;
         for (var i = 1; i < (rows.length-1); i++){
 
-            a = rows[i].getElementByTagName("td")[0];
-            b = rows[i+1].getElementByTagName("td")[0];
+            a = rows[i].getElementsByTagName("td")[0];
+            b = rows[i+1].getElementsByTagName("td")[0];
             // Still descending
             if(a.innerHTML.toLowerCase() > b.innerHTML.toLowerCase()){
                 rows[i].parentNode.insertBefore(rows[i+1],rows[i]);
@@ -67,8 +67,8 @@ function sort_desc_number() {
         rows = table.rows;
         for (var i = 1; i < (rows.length-1); i++){
 
-            a = rows[i].getElementByTagName("td")[0];
-            b = rows[i+1].getElementByTagName("td")[0];
+            a = rows[i].getElementsByTagName("td")[0];
+            b = rows[i+1].getElementsByTagName("td")[0];
             // Still ascending
             if(a.innerHTML.toLowerCase() < b.innerHTML.toLowerCase()){
                 rows[i].parentNode.insertBefore(rows[i+1],rows[i]);
@@ -87,8 +87,8 @@ function sort_asc_name(){
         rows = table.rows;
         for (var i = 1; i < (rows.length-1); i++){
 
-            a = rows[i].getElementByTagName("td")[1];
-            b = rows[i+1].getElementByTagName("td")[1];
+            a = rows[i].getElementsByTagName("td")[1];
+            b = rows[i+1].getElementsByTagName("td")[1];
             // Still descending
             if(a.innerHTML.toLowerCase() > b.innerHTML.toLowerCase()){
                 rows[i].parentNode.insertBefore(rows[i+1],rows[i]);
@@ -107,8 +107,8 @@ function sort_desc_name(){
         rows = table.rows;
         for (var i = 1; i < (rows.length-1); i++){
 
-            a = rows[i].getElementByTagName("td")[1];
-            b = rows[i+1].getElementByTagName("td")[1];
+            a = rows[i].getElementsByTagName("td")[1];
+            b = rows[i+1].getElementsByTagName("td")[1];
             // Still ascending
             if(a.innerHTML.toLowerCase() < b.innerHTML.toLowerCase()){
                 rows[i].parentNode.insertBefore(rows[i+1],rows[i]);
