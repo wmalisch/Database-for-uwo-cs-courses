@@ -8,7 +8,7 @@
     <h1>UWO Computer Science</h1>
     <h2>UWO Courses</h2>
     <?php
-        include 'header.php';
+        include '../header.php';
         include '../connectdb.php';
     ?>
     <hr>
