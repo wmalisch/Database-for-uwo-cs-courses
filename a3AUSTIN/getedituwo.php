@@ -19,9 +19,7 @@
     if(!result){
         die("database query failed");
     }
-    echo mysqli_connect_error();
-    echo mysqli_error($connection);
-    echo "<br>" . $query . "<br>";
+    $data = mysqli_fetch_assoc($result);
     echo "<h3>You are editing " . $course . "</h3>";
     echo "<form action='edituwo.php' method='post'>";
     echo "<div name='courseNumber' value='" . $data["courseName"] . "'>". "Current course name: " . $data["courseName"] . "   " . "</div>";
