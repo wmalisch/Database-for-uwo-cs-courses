@@ -25,17 +25,17 @@
         echo "<h3 name='courseNumber' value='" . $course . "'>" . $course . "</h3><br>";
         echo "<input type='hidden' name='courseNumber' value='" . $course . "'>" . "<br>";
         
-        echo "Current course name: " . $data["courseName"] . "<t></t>";
-        echo "New course name: " . "<input type='text' name='courseName'>" . "<br>";
+        echo "Current course name: " . $data["courseName"] . "    | ";
+        echo "   New course name: " . "<input type='text' name='courseName'>" . "<br>";
         
-        echo "Current course weight: " . $data["weight"] . "<t></t>";
-        echo "New course weight: " . "<select name='weight'>
+        echo "Current course weight: " . $data["weight"] . "    | ";
+        echo "   New course weight: " . "<select name='weight'>
                 <option value='0.5'>0.5</option>
                 <option value='1.0'>1.0</option>
             </select><br>";
         
-        echo "Current course suffix: " . $data["suffix"] . "<t></t>";
-        echo "New course suffix: " . "<select name='suffix'>
+        echo "Current course suffix: " . $data["suffix"] . "    | ";
+        echo "   New course suffix: " . "<select name='suffix'>
                 <option value='A/B'>A/B</option>
                 <option value='F/G'>F/G</option>
                 <option value='E'>E</option>
