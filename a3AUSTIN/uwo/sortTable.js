@@ -16,8 +16,8 @@ function check_direction(n) {
     var table, rows, a, b;
     table = document.getElementById('table');
     rows = table.rows;
-    a = rows[1].getElementByTagName('td')[n];
-    b = rows[2].getElementByTagName('td')[n];
+    a = rows[1].getElementsByTagName('td')[n];
+    b = rows[2].getElementsByTagName('td')[n];
 
     // If the table is currently descending
     if(a.innerHTML.toLowerCase() > b.innerHTML.toLowerCase()){
