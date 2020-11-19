@@ -23,7 +23,8 @@
     echo "<h3>You are editing: </h3><br>";
     echo "<form action='edituwo.php' method='post'>";
     echo "<h3 name='courseNumber' value='" . $course . "'>" . $course . "</h3><br>";
-    echo "Current course name: " . $data["courseName"] . "   " . "</div>";
+    echo "Current course number: <input type='text' name='courseNumber' value='" . $course . "'>" . "<br>";
+    echo "Current course name: " . $data["courseName"] . "   " ;
     echo "New course name: " . "<input type='text' name='courseName'>" . "<br>";
     echo "Current course weight: " . $data["weight"] . "   ";
     echo "New course weight: " . "<select name='weight'>
