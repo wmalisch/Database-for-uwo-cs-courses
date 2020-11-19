@@ -17,10 +17,11 @@
     $query = "SELECT * FROM westernCourses WHERE courseNumber=$course";
     $result = mysqli_query($connection,$query);
     $data = mysqli_fetch_assoc($result);
+    $other = mysqli_fetch_assoc($result);
     if(!result){
         die("database query failed");
     }
-    echo "<h3>You are editing" . $course . "</h3>";
+    echo "<h3>You are editing " . $course . "</h3>";
     echo "<form action='edituwo.php' method='post'>";
     echo "<div name='courseNumber' value='" . $data["courseName"] . "'>". "Current course name: " . $data["courseName"] . "   " . "</div>";
     echo "New course name: " . "<input type='text' name='courseName'>" . "<br>";
