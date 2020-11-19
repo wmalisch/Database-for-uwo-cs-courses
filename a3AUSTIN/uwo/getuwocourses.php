@@ -21,8 +21,8 @@
         }
         echo "<table style='width:100%' id='table'>";
         echo "<tr>";
-        echo "<th id='hnumber'>Course Number</th>";
-        echo "<th id='hname'>Course Name</th>";
+        echo "<th id='hnumber' onclick='check_direction(0)'>Course Number</th>";
+        echo "<th id='hname' onclick='check_direction(1)'>Course Name</th>";
         echo "<th>Course Weight</th>";
         echo "<th>Course Suffix</th>";
         echo "<th>Edit</th><th>Delete</th>";
