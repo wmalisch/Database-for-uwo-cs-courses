@@ -9,7 +9,7 @@
     <h2>UWO Courses</h2>
     <?php
         include 'header.php';
-        include 'connectdb.php';
+        include '../connectdb.php';
     ?>
     <hr>
     <?php

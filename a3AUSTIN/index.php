@@ -16,7 +16,7 @@
     <h3>
         Here you can take a look at UWO courses, other universities, and the other universities courses<br>
     </h3>
-    <form action="getuwocourses.php" method ="post">
+    <form action="uwo/getuwocourses.php" method ="post">
         <input type="submit" value="Get UWO Courses">
     </form>
     <form action="getuniversitys.php" method ="post">
