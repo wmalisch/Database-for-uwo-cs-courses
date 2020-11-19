@@ -26,9 +26,8 @@
             echo "<td>" . $row["weight"] . "</td>";
             echo "<td>" . $row["suffix"] . "</td>";
             echo "</tr>";
-            echo "</table>";
-            
         }
+        echo "</table>";
         mysqli_free_result($result);
     ?>
     <?php
