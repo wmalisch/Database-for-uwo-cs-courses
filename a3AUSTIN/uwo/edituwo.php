@@ -12,7 +12,7 @@
     $name = $_POST["courseName"];
     $weight = $_POST["weight"];
     $suffix = $_POST["suffix"];
-    
+    echo "<li>" . $number . "</li>"
 ?>
 </body>
 </html>
