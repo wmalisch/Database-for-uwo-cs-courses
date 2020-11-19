@@ -7,6 +7,7 @@
 </head>
 <body>
     <?php
+    
         include 'connectdb.php'
     ?>
     <h1>Home Page</h1>

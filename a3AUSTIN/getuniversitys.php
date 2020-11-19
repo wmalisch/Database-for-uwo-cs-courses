@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset='utf-8'>
-    <title>UNIVERSITIES</title>
+    <title>UNIVERSITY'S</title>
 </head>
 <body>
     <?php
