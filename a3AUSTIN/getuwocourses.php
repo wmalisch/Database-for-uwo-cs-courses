@@ -30,9 +30,9 @@
             echo "<td>" . $row["weight"] . "</td>";
             echo "<td>" . $row["suffix"] . "</td>";
             echo "<td>" . "<form action='getedituwo.php' method='post'>";
-                echo "<input type='button' name='courseNumber' value='" . $row["courseNumber"] . "'>";
+                echo "<input type='submit' name='courseNumber' value='" . $row["courseNumber"] . "'>";
             echo "</form>" . "</td>";
-            echo "<td>" . "<input type='button' value='" . $row["courseNumber"] . "'>" . "</td>";
+            echo "<td>" . "<input type='submit' value='" . $row["courseNumber"] . "'>" . "</td>";
             echo "</tr>";
         }
         echo "</table>";
