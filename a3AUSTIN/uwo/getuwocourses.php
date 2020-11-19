@@ -18,7 +18,7 @@
         if(!result){
             die("Database query failed");
         }
-        echo "<table style='width:100%'>";
+        echo "<table style='width:100%' id='table'>";
         echo "<tr>";
         echo "<th>Course Number</th><th>Course Name</th><th>Course Weight</th><th>Course Suffix</th>";
         echo "<th>Edit</th><th>Delete</th>";
