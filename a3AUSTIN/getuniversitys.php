@@ -11,6 +11,7 @@
         include 'header.php';
         include 'connectdb.php';
     ?>
+    <hr>
     <?php
         $query = "SELECT * FROM university";
         $result = mysqli_query($connection, $query);

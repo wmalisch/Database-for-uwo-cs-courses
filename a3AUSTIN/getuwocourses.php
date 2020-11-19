@@ -11,6 +11,7 @@
         include 'header.php';
         include 'connectdb.php';
     ?>
+    <hr>
     <?php
         $query = "SELECT * FROM westernCourses";
         $result = mysqli_query($connection, $query);
@@ -28,7 +29,9 @@
             echo "<td>" . $row["courseName"] . "</td>";
             echo "<td>" . $row["weight"] . "</td>";
             echo "<td>" . $row["suffix"] . "</td>";
-            echo "<td>" . "<input type='button' value='" . $row["courseNumber"] . "'>" . "</td>";
+            echo "<td>" . "<form action='getedituwo.php' method='post'>";
+                echo "<input type='button' name='courseNumber' value='" . $row["courseNumber"] . "'>";
+            echo "</form>" . "</td>";
             echo "<td>" . "<input type='button' value='" . $row["courseNumber"] . "'>" . "</td>";
             echo "</tr>";
         }

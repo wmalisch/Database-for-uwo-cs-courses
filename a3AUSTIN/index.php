@@ -12,6 +12,7 @@
         include 'header.php';
         include 'connectdb.php';
     ?>
+    <hr>
     <h3>
         Here you can take a look at UWO courses, other universities, and the other universities courses<br>
     </h3>
