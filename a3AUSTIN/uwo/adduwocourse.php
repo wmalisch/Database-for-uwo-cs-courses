@@ -5,7 +5,7 @@
     <title>ADD UWO COURSES</title>
     <script src="max.js"></script>
 </head>
-<body>
+<body onload="script();">
 <h1>Add UWO Course</h1>
 <?php
     include '../header.php';
