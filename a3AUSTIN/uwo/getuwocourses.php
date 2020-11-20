@@ -13,7 +13,7 @@
         include '../connectdb.php';
     ?>
     <hr>
-    <form action="addcourse.php" method="post">
+    <form action="adduwocourse.php" method="post">
         <button type="submit">Add new course</button>
     </form>
     <br>
