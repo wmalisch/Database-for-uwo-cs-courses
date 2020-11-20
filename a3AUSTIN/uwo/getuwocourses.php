@@ -14,6 +14,9 @@
     ?>
     <hr>
     <?php
+        echo "<form action='addcourse.php' method='post'>";
+            echo "<button type='submit'>Add new course</button>"
+        "</form>"
         $query = "SELECT * FROM westernCourses";
         $result = mysqli_query($connection, $query);
         if(!result){
@@ -34,9 +37,9 @@
             echo "<td>" . $row["weight"] . "</td>";
             echo "<td>" . $row["suffix"] . "</td>";
             echo "<td>" . "<form action='getedituwo.php' method='post'>";
-                echo "<input type='submit' name='courseNumber' value='" . $row["courseNumber"] . "'>";
+                echo "<button type='submit' name='courseNumber' value='" . $row["courseNumber"] . "'></button";
             echo "</form>" . "</td>";
-            echo "<td>" . "<input type='submit' value='" . $row["courseNumber"] . "'>" . "</td>";
+            echo "<td>" . "<button type='submit' value='" . $row["courseNumber"] . "'></button>" . "</td>";
             echo "</tr>";
         }
         echo "</table>";

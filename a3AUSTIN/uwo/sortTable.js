@@ -1,17 +1,3 @@
-// window.onload = function(){
-//     prepareListener();
-// }
-
-// function prepareListener() {
-//     var headerNum, headerName;
-
-//     headerNum = document.getElementById('hnumber');
-//     headerName = document.getElementById('hname');
-
-//     headerNum.addEventListener("click", check_direction(0));
-//     headerName.addEventListener("click",check_direction(1));
-// }
-
 function check_direction(n) {
     var table, rows, a, b;
     table = document.getElementById('table');
