@@ -1,7 +1,3 @@
-
-document.getElementById('newNumber').maxLength = "4";
-document.getElementById('newName').maxLength = "50";
-
 function check_if_num(num) {
     var event = num || window.event;
     var char;
