@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>ADD UWO COMPLETE</title>
 </head>
-<body>
+<body onload=>
 <?php
     include '../connectdb.php';
     $number = $_POST["courseNumber"];

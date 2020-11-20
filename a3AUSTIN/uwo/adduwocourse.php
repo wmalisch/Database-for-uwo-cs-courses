@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>ADD UWO COURSES</title>
+    <script src="max.js"></script>
 </head>
 <body>
 <h1>Add UWO Course</h1>
@@ -14,10 +15,10 @@
 <h3>Enter the details regarding the new course below: </h3>
 <form action="adduwo.php" method="post">
     <div>
-        New Course Number: <input type="text" id='newNumber' name="courseNumber"> 
+        New Course Number: cs<input type="text" id='newNumber' name="courseNumber" minlength='4' onkeypress='check_if_num(num)'> 
     </div>
     <div>
-        New Course Name: <input type="text" id='newName' name="courseName"> 
+        New Course Name: <input type="text" id='newName' name="courseName" minlength='1'> 
     </div>
     <div>
         New Course Weight: <select id='newWeight' name="weight">
