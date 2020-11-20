@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>ADD UWO COURSES</title>
+    <script src="max.js"></script>
 </head>
 <body>
 <h1>Add UWO Course</h1>
