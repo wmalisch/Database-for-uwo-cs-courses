@@ -15,13 +15,15 @@
 <h3>Enter the details regarding the new course below: </h3>
 <form action="adduwo.php" method="post">
     <div>
-        New Course Number: cs<input type="text" id='newNumber' name="courseNumber" minlength='4' maxlength='4' onkeypress='check_if_num(num)'> 
+        <label for='newNumber'>New Course Number: cs</label>
+        <input type="text" id='newNumber' name="courseNumber" minlength="4" maxlength="4" onkeypress='check_if_num(num)'> 
     </div>
     <div>
         New Course Name: <input type="text" id='newName' name="courseName" minlength='1' maxlength='50'> 
     </div>
     <div>
-        New Course Weight: <select id='newWeight' name="weight">
+        New Course Weight: 
+        <select id='newWeight' name="weight">
             <option value='0.5'>0.5</option>
             <option value='1.0'>1.0</option>
         </select>
