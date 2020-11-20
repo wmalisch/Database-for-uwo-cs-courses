@@ -3,7 +3,6 @@
 <head>
     <meta charset="utf-8">
     <title>ADD UWO COURSES</title>
-    <script src="max.js"></script>
 </head>
 <body>
 <h1>Add UWO Course</h1>
@@ -22,7 +21,7 @@
             name="courseNumber" 
             minlength="4" 
             maxlength="4"
-            oninput="this.value = this.value.replace(/[^0-9.]/g,'').replace(/(\..*)\./g, '$1');" />
+            oninput="check_if_num(this.value)" />
     </div>
     <div>
         New Course Name: <input type="text" id='newName' name="courseName" minlength='1' maxlength='50'> 
