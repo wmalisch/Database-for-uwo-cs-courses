@@ -1,4 +1,4 @@
-document.onload() = function max_mength () {
+window.onload() = function max_mength () {
     document.getElementById('newNumber').maxLength = "4";
     document.getElementById('newName').maxLength = "50";
 }
