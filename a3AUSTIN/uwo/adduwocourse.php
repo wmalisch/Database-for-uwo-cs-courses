@@ -22,7 +22,7 @@
             name="courseNumber" 
             minlength="4" 
             maxlength="4"
-            oninput="check_if_num(this.value)" />
+            oninput="this.value=check_if_num(this.value)" />
     </div>
     <div>
         New Course Name: <input type="text" id='newName' name="courseName" minlength='1' maxlength='50'> 
