@@ -14,19 +14,19 @@
 <h3>Enter the details regarding the new course below: </h3>
 <form action="adduwo.php" method="post">
     <div>
-        New Course Number: <input type="text" name="courseNumber"> 
+        New Course Number: <input type="text" id='newNumber' name="courseNumber"> 
     </div>
     <div>
-        New Course Name: <input type="text" name="courseName"> 
+        New Course Name: <input type="text" id='newName' name="courseName"> 
     </div>
     <div>
-        New Course Weight: <select name="weight">
+        New Course Weight: <select id='newWeight' name="weight">
             <option value='0.5'>0.5</option>
             <option value='1.0'>1.0</option>
         </select>
     </div>
     <div>
-        New Course Suffix: <select name="suffix">
+        New Course Suffix: <select id='newSuffix' name="suffix">
             <option value="A/B">A/B</option>
             <option value="F/G">F/G</option>
             <option value="E">E</option>
