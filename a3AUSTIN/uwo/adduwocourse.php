@@ -16,7 +16,13 @@
 <form action="adduwo.php" method="post">
     <div>
         <label for='newNumber'>New Course Number: cs</label>
-        <input type="text" id='newNumber' name="courseNumber" minlength="4" maxlength="4" onkeypress='check_if_num(num)'> 
+        <input 
+            type="text" 
+            id='newNumber' 
+            name="courseNumber" 
+            minlength="4" 
+            maxlength="4"
+            oninput="this.value = this.value.replace(/[^0-9.]/g,'').replace(/(\..*)\./g, '$1');" />
     </div>
     <div>
         New Course Name: <input type="text" id='newName' name="courseName" minlength='1' maxlength='50'> 
