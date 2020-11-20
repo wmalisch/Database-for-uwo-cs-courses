@@ -2,10 +2,10 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>EDIT UWO COMPLETE</title>
+    <title>ADD UWO COMPLETE</title>
 </head>
 <body>
-<h1>Edit Complete!</h1>
+<h1>Add Error!</h1>
 <?php
     include '../connectdb.php';
     $number = $_POST["courseNumber"];
