@@ -13,10 +13,11 @@
         include '../connectdb.php';
     ?>
     <hr>
+    <form action="addcourse.php" method="post">
+        <button type="submit">Add new course</button>
+    </form>
+    <br>
     <?php
-        echo "<form action='addcourse.php' method='post'>";
-            echo "<button type='submit'>Add new course</button>";
-        echo "</form>";
         $query = "SELECT * FROM westernCourses";
         $result = mysqli_query($connection, $query);
         if(!result){
@@ -37,9 +38,9 @@
             echo "<td>" . $row["weight"] . "</td>";
             echo "<td>" . $row["suffix"] . "</td>";
             echo "<td>" . "<form action='getedituwo.php' method='post'>";
-                echo "<button type='submit' name='courseNumber' value='" . $row["courseNumber"] . "'></button";
+                echo "<button type='submit' name='courseNumber' value='" . $row["courseNumber"] . "'>" . $row["courseNumber" . "</button";
             echo "</form>" . "</td>";
-            echo "<td>" . "<button type='submit' value='" . $row["courseNumber"] . "'></button>" . "</td>";
+            echo "<td>" . "<button type='submit' value='" . $row["courseNumber"] . "'>" . $row["courseNumber" . "</button>" . "</td>";
             echo "</tr>";
         }
         echo "</table>";
