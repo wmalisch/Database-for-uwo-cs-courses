@@ -12,5 +12,6 @@ function check_if_num(num) {
         if(event.preventDefault) {
             event.preventDefault();
         }
+        event.preventDefault();
     }
 }
