@@ -15,8 +15,8 @@
     <hr>
     <?php
         echo "<form action='addcourse.php' method='post'>";
-            echo "<button type='submit'>Add new course</button>"
-        "</form>"
+            echo "<button type='submit'>Add new course</button>";
+        echo "</form>";
         $query = "SELECT * FROM westernCourses";
         $result = mysqli_query($connection, $query);
         if(!result){
