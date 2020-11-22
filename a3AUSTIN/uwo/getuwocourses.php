@@ -19,7 +19,6 @@
     <br>
     <?php
         $query = "SELECT * FROM westernCourses";
-        $courses = ""
         $result = mysqli_query($connection, $query);
         if(!result){
             die("Database query failed");
