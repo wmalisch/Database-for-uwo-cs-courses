@@ -16,7 +16,6 @@
     <br>
     <?php
         $query = "SELECT * FROM westernCourses as W LEFT JOIN equivalence as E on W.courseNumber=E.courseNumber";
-        $courses = ""
         $result = mysqli_query($connection, $query);
         if(!result){
             die("Database query failed");
