@@ -6,8 +6,7 @@
     <script src="sortTable.js"></script>
 </head>
 <body>
-    <h1>UWO Computer Science</h1>
-    <h2>UWO Delete Courses</h2>
+    <h1>UWO Delete Courses</h1>
     <?php
         include '../../header.php';
         include '../../connectdb.php';
@@ -27,8 +26,9 @@
         echo "<th>Course Weight</th>";
         echo "<th>Course Suffix</th>";
         echo "<th>Edit</th><th>Delete</th>";
-        echo "</tr>";    
+        echo "</tr>";
         while($row = mysqli_fetch_assoc($result)){
+            var_dump($row);
             echo "<tr>";
             echo "<td>" . $row["courseNumber"] . "</td>";
             echo "<td>" . $row["courseName"] . "</td>";
@@ -46,4 +46,4 @@
         mysqli_close($connection);
     ?>
 </body>
-</html>
+</html>m
