@@ -6,12 +6,10 @@
 </head>
 <body>
 <?php
-    include '../connectdb.php';
+    include '../../header.php';
+    include '../../connectdb.php';
     $number = $_POST["courseNumber"];
-    $name = $_POST["courseName"];
-    $weight = $_POST["weight"];
-    $suffix = $_POST["suffix"];
-    $query = "INSERT INTO westernCourses VALUES('cs$number','$name','$weight','$suffix');"; 
+    $query = "DELETE FROM westernCourses where courseNumber='$number';"; 
     if(!mysqli_query($connection,$query)){
         echo "<h1>Add Error!</h1>";
         echo mysqli_error($connection);
@@ -20,7 +18,7 @@
         echo"</form>";
         die("Error while trying to update UWO course " . mysqli_error($connection));
     }else{
-        header('Location: ../index.php');
+        header('Location: ../../index.php');
         exit;
     }
 ?>

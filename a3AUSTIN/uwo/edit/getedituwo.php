@@ -8,8 +8,8 @@
 
 <h1>Edit UWO Course</h1>
 <?php
-    include '../header.php';
-    include '../connectdb.php';
+    include '../../header.php';
+    include '../../connectdb.php';
 ?>
 <hr>
 <?php

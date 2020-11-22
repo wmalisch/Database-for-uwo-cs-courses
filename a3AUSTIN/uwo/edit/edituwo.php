@@ -7,7 +7,7 @@
 <body>
 <h1>Edit Complete!</h1>
 <?php
-    include '../connectdb.php';
+    include '../../connectdb.php';
     $number = $_POST["courseNumber"];
     $name = $_POST["courseName"];
     $weight = $_POST["weight"];
@@ -16,7 +16,7 @@
     if(!mysqli_query($connection,$query)){
         die("Error while trying to update UWO course " . mysqli_error($connection));
     }else{
-        header('Location: ../index.php');
+        header('Location: ../../index.php');
         exit;
     }
 ?>

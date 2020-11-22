@@ -7,8 +7,8 @@
 <body>
 <h1>Add UWO Course</h1>
 <?php
-    include '../header.php';
-    include '../connectdb.php';
+    include '../../header.php';
+    include '../../connectdb.php';
 ?>
 <br>
 <h3>Enter the details regarding the new course below: </h3>
