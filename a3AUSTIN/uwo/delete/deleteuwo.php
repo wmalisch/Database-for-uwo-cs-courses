@@ -13,13 +13,12 @@
     if(!mysqli_query($connection,$query)){
         echo "<h1>Delete Error!</h1>";
         echo mysqli_error($connection);
-        echo "<form action='deleteuwocourse.php method='post'>";
+        echo "<form action='deleteuwocourse.php' method='post'>";
         echo "<input type='submit' value='Retry Entering Value'>";
         echo"</form>";
         die("Error while trying to update UWO course " . mysqli_error($connection));
     }else{
-        header('Location: ../../index.php');
-        exit;
+        echo "delete should have worked";
     }
 ?>
 </body>

@@ -21,11 +21,11 @@
         }
         echo "<table style='width:100%' id='table'>";
         echo "<tr>";
-        echo "<th><button id='hnumber' onclick='check_direction(0)'>Course Number</button></th>";
-        echo "<th><button id='hname' onclick='check_direc tion(1)'>Course Name</button></th>";
+        echo "<th>Course Number</th>";
+        echo "<th>Course Name</th>";
         echo "<th>Course Weight</th>";
         echo "<th>Course Suffix</th>";
-        echo "<th>Edit</th><th>Delete</th>";
+        echo "<th>Equivalent Course Code</th><th>Delete</th>";
         echo "</tr>";
         while($row = mysqli_fetch_assoc($result)){
             echo "<tr>";
@@ -34,8 +34,9 @@
             echo "<td>" . $row["weight"] . "</td>";
             echo "<td>" . $row["suffix"] . "</td>";
             echo "<td>" . $row["courseCode"] . "</td>";
-            echo "<td>" . "<form action='deleteuwo.php' method='post'>";     
-                echo "<button type='submit' onclick='alert()' value='" . $row["courseNumber"] . "'>" . $row["courseNumber"] . " Equivalent to: " . $row["Equivalent Course"] . "</button>" . "</td>";
+            echo "<td>" . "<form action='deleteuwo.php' method='post'>";
+            echo "<button type='submit' onclick='alert()' value='" . $row["courseNumber"] . "'>" . $row["courseNumber"] . " Equivalent to: " . $row["Equivalent Course"] . "</button>" . "</td>";
+            echo "<div name='courseCode' value='" . $row["courseCode"] . "'></div>";
             echo "</form>" . "</td>";
             echo "</tr>";
         }
