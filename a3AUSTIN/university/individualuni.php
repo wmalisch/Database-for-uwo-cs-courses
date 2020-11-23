@@ -6,7 +6,7 @@
     </head>
     <body>
         <?php
-            include '../connectdb.php';
+            include '../../connectdb.php';
             $university = $_POST["officialName"];
             $uniId = $_POST["uniId"];
             $city = $_POST["city"];
@@ -14,16 +14,16 @@
             $nickname = $_POST["nickname"];
             echo "<h1>" . $university . " Computer Science</h1>";
             echo "<h2>Course and Basic Information</h2>";
-            include '../header/php';
+            include '../../header/php';
             echo "<hr>";
             echo "<h3>Basic University Information</h3>";
             echo "<table style='width:30%' id='detailstable'>";
             echo "<tr><th>Detail</th><th>Value</th></tr>";
-            echo "<tr><td>University ID</td><td><h2>" . $uniId . "</h2></td></tr>";
-            echo "<tr><td>Official Name</td><td><h2>" . $university . "</h2></td></tr>";
-            echo "<tr><td>City</td><td><h2>" . $city . "</h2></td></tr>";
-            echo "<tr><td>Province Code</td><td><h2>" . $provinceCode . "</h2></td></tr>";
-            echo "<tr><td>Nickname</td><td><h2>" . $nickname . "</h2></td></tr>";
+            echo "<tr><td>University ID</td><td><h4>" . $uniId . "</h4></td></tr>";
+            echo "<tr><td>Official Name</td><td><h4>" . $university . "</h4></td></tr>";
+            echo "<tr><td>City</td><td><h4>" . $city . "</h4></td></tr>";
+            echo "<tr><td>Province Code</td><td><h4>" . $provinceCode . "</h4></td></tr>";
+            echo "<tr><td>Nickname</td><td><h4>" . $nickname . "</h4></td></tr>";
             echo "</table>";
             echo "<hr>";
             echo "<h3>University Course Information</h3>";
