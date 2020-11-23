@@ -25,14 +25,14 @@
             echo "<tr><td>Province Code</td><td><h4>" . $provinceCode . "</h4></td></tr>";
             echo "<tr><td>Nickname</td><td><h4>" . $nickname . "</h4></td></tr>";
             echo "</table>";
-            echo "<hr>";
+            echo "<br>";
             echo "<h3>University Course Information</h3>";
             $query = "SELECT * FROM outsideCourses where uniId='$uniId'";
             $result = mysqli_query($connection, $query);
             if(!result){
                 die("Database query failed");
             }
-            echo "<table style='width:100%' id='coursetable'>";
+            echo "<table style='width:100%; border: 1px solid black' id='coursetable'>";
             echo "<tr>";
             echo "<th>Course Code</th>";
             echo "<th>Course Name</th>";
@@ -48,6 +48,7 @@
                 echo "</tr>";
             }
             echo "</table>";
+            echo "<br><br>";
             mysqli_close($connection);
         ?>
     </body>
