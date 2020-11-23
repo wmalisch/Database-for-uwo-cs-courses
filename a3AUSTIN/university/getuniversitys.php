@@ -14,7 +14,7 @@
     ?>
     <hr>
     <?php
-        $query = "SELECT * FROM university";
+        $query = "SELECT * FROM university ORDER BY provinceCode";
         $result = mysqli_query($connection, $query);
         if(!result){
             die("Database query failed");
@@ -32,6 +32,10 @@
             echo "<td>" . $row["uniId"] . "</td>";
             echo "<td>" . "<form action='individualuni.php' method='post'>";
                 echo "<button type='submit' name='officialName' value='" . $row["officialName"] . "'>" . $row["officialName"] . "</button>";
+                echo "<input type='hidden' name='uniId' value='" . $row["uniId"] . "'>";
+                echo "<input type='hidden' name='city' value='" . $row["city"] . "'>";
+                echo "<input type='hidden' name='provinceCode' value='" . $row["provinceCode"] . "'>";
+                echo "<input type='hidden' name='nickname' value='" . $row["nickname"] . "'>";
             echo "</form>" . "</td>";
             echo "<td>" . $row["city"] . "</td>";
             echo "<td>" . "<form action='unibyprovince.php' method='post'>";
@@ -39,9 +43,8 @@
             echo "</form>" . "</td>";
             echo "<td>" . $row["nickname"] . "</td>";
             echo "</tr>";
+        echo "</table>";
         }
-    ?>
-    <?php
         mysqli_close($connection);
     ?>
 </body>

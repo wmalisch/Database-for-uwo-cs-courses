@@ -52,7 +52,6 @@ function sort_desc_number() {
         still_switching = false;
         rows = table.rows;
         for (var i = 1; i < (rows.length-1); i++){
-
             a = rows[i].getElementsByTagName("td")[0];
             b = rows[i+1].getElementsByTagName("td")[0];
             // Still ascending
