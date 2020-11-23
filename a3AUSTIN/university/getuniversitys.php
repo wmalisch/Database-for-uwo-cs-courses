@@ -39,7 +39,7 @@
                 echo "<input type='hidden' name='nickname' value='" . $row["nickname"] . "'>";
             echo "</form>" . "</td>";
             echo "<td>" . $row["city"] . "</td>";
-            echo "<td>" . "<form action='unibyprovince.php' method='post'>";
+            echo "<td>" . "<form action='provincecode.php' method='post'>";
                 echo "<button type='submit' name='provinceCode' value='" . $row["provinceCode"] . "'>" . $row["provinceCode"] . "</button>";
             echo "</form>" . "</td>";
             echo "<td>" . $row["nickname"] . "</td>";
