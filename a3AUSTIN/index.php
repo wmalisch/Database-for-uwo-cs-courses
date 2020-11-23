@@ -21,7 +21,7 @@
             <input type="submit" value="Get UWO Courses">
         </div>
     </form>
-    <form action="getuniversitys.php" method ="post">
+    <form action="uni/getuniversitys.php" method ="post">
         <div class="uniButton">
             <input type="submit" value="Get University's">
         </div>
