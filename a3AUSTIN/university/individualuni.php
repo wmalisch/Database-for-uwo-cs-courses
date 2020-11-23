@@ -17,13 +17,13 @@
             include '../header.php';
             echo "<hr>";
             echo "<h3>Basic University Information</h3>";
-            echo "<table style='width:30%; border: 1px solid black' id='detailstable'>";
+            echo "<table style='width:30%; border: 1px solid black; margin-left:auto; margin-right:auto' id='detailstable'>";
             echo "<tr><th>Detail</th><th>Value</th></tr>";
-            echo "<tr><td>University ID</td><td><h4>" . $uniId . "</h4></td></tr>";
-            echo "<tr><td>Official Name</td><td><h4>" . $university . "</h4></td></tr>";
-            echo "<tr><td>City</td><td><h4>" . $city . "</h4></td></tr>";
-            echo "<tr><td>Province Code</td><td><h4>" . $provinceCode . "</h4></td></tr>";
-            echo "<tr><td>Nickname</td><td><h4>" . $nickname . "</h4></td></tr>";
+            echo "<tr><td>University ID</td><td>" . $uniId . "</td></tr>";
+            echo "<tr><td>Official Name</td><td>" . $university . "</td></tr>";
+            echo "<tr><td>City</td><td>" . $city . "</td></tr>";
+            echo "<tr><td>Province Code</td><td>" . $provinceCode . "</td></tr>";
+            echo "<tr><td>Nickname</td><td>" . $nickname . "</td></tr>";
             echo "</table>";
             echo "<br>";
             echo "<h3>University Course Information</h3>";
@@ -36,7 +36,7 @@
             echo "<tr>";
             echo "<th>Course Code</th>";
             echo "<th>Course Name</th>";
-            echo "<th>Take Year _</th>";
+            echo "<th>Taken in  Year _</th>";
             echo "<th>Weight</th>";
             echo "</tr>";
             while($row = mysqli_fetch_assoc($result)){
