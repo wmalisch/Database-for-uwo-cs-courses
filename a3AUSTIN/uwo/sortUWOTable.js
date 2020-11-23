@@ -24,7 +24,7 @@ function check_direction(n) {
     }
 }
 
-function sort_asc_number() {
+function sort_asc_province() {
     var table, rows, a, b;
     var still_switching = true;
     table = document.getElementById('table');
@@ -44,7 +44,7 @@ function sort_asc_number() {
     }
 }
 
-function sort_desc_number() {
+function sort_desc_province() {
     var table, rows, a, b;
     var still_switching = true;
     table = document.getElementById('table');
