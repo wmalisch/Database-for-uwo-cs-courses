@@ -9,7 +9,7 @@
     echo "<h1>Delete Warning</h1>";
     include '../../header.php';
     include '../../connectdb.php';
-    echo "<hr>"
+    echo "<hr>";
     $number = $_POST["courseNumber"];
     $code = $_POST["courseCode"];
     echo "<h5>Are you sure you want to delete the western course?". $number . "</h5>";
