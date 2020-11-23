@@ -16,13 +16,13 @@
     <h3>
         Here you can take a look at UWO courses, other universities, and the other universities courses<br>
     </h3>
-    <div id='container'>
-        <div class='innerContainer'>
+    <div id='container' style='width:75%; text-align:center;'>
+        <div class='innerContainer' style='display: inline-block;'>
             <form action="uwo/getuwocourses.php" method ="post">
                 <input type="submit" value="Get UWO Courses">
             </form>
         </div>
-        <div class='innerContainer'>
+        <div class='innerContainer' style='display: inline-block;'>
             <form action="uni/getuniversitys.php" method ="post">
                 <input type="submit" value="Get University's">
             </form>
