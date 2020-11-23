@@ -6,7 +6,7 @@
     </head>
     <body>
         <?php
-            include '../../connectdb.php';
+            include '../connectdb.php';
             $university = $_POST["officialName"];
             $uniId = $_POST["uniId"];
             $city = $_POST["city"];
@@ -14,7 +14,7 @@
             $nickname = $_POST["nickname"];
             echo "<h1>" . $university . " Computer Science</h1>";
             echo "<h2>Course and Basic Information</h2>";
-            include '../../header/php';
+            include '../header/php';
             echo "<hr>";
             echo "<h3>Basic University Information</h3>";
             echo "<table style='width:30%' id='detailstable'>";
