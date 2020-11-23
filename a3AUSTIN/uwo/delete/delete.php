@@ -8,7 +8,7 @@
 <h1>DELETE COMPLETE</h1>
 <?php
     include '../../connectdb.php';
-    $number = $_POST["courseNumber"]
+    $number = $_POST["courseNumber"];
     $query = "DELETE FROM westernCourses where courseNumber='$number';"; 
         if(!mysqli_query($connection,$query)){
             echo "<h1>Delete Error!</h1>";
