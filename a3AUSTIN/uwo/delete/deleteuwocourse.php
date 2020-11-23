@@ -3,7 +3,7 @@
 <head>
     <meta charset='utf-8'>
     <title>UWO DELETES</title>
-    <script src="sortTable.js"></script>
+    <script src="alert.js"></script>
 </head>
 <body>
     <h1>UWO Delete Courses</h1>
@@ -34,8 +34,9 @@
             echo "<td>" . $row["weight"] . "</td>";
             echo "<td>" . $row["suffix"] . "</td>";
             echo "<td>" . $row["courseCode"] . "</td>";
+            if($row["courseCode"])
             echo "<td>" . "<form action='deleteuwo.php' method='post'>";     
-                echo "<button type='submit' value='" . $row["courseNumber"] . "'>" . $row["courseNumber"] . " Equivalent to: " . $row["courseCode"] . "</button>" . "</td>";
+                echo "<button type='submit' onclick='alert()' value='" . $row["courseNumber"] . "'>" . $row["courseNumber"] . " Equivalent to: " . $row["Equivalent Course"] . "</button>" . "</td>";
             echo "</form>" . "</td>";
             echo "</tr>";
         }
