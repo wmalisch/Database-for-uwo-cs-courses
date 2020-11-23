@@ -13,13 +13,14 @@
         include '../connectdb.php';
     ?>
     <hr>
+    <br>
     <?php
         $query = "SELECT * FROM university ORDER BY provinceCode";
         $result = mysqli_query($connection, $query);
         if(!result){
             die("Database query failed");
         }
-        echo "<table style='width:100%' id='table'>";
+        echo "<table style='width:100%; border: 1px solid black' id='table'>";
         echo "<tr>";
         echo "<th>Uni ID</th>";
         echo "<th><button id='officialname' onclick='check_direction(1)'>Official Name</button></th>";

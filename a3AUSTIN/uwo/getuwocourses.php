@@ -23,7 +23,7 @@
         if(!result){
             die("Database query failed");
         }
-        echo "<table style='width:100%' id='table'>";
+        echo "<table style='width:100%; border: 1px solid black' id='table'>";
         echo "<tr>";
         echo "<th><button id='hnumber' onclick='check_direction(0)'>Course Number</button></th>";
         echo "<th><button id='hname' onclick='check_direction(1)'>Course Name</button></th>";
