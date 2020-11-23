@@ -3,7 +3,7 @@
 <head>
     <meta charset='utf-8'>
     <title>UWO COURSES</title>
-    <script src="sortTable.js"></script>
+    <script src="sortUWOTable.js"></script>
 </head>
 <body>
     <h1>UWO Computer Science</h1>
@@ -30,7 +30,7 @@
         echo "<th>Course Weight</th>";
         echo "<th>Course Suffix</th>";
         echo "<th>Edit</th><th>Delete</th>";
-        echo "</tr>";    
+        echo "</tr>";
         while($row = mysqli_fetch_assoc($result)){
             echo "<tr>";
             echo "<td>" . $row["courseNumber"] . "</td>";
