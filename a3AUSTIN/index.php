@@ -16,16 +16,18 @@
     <h3>
         Here you can take a look at UWO courses, other universities, and the other universities courses<br>
     </h3>
-    <form action="uwo/getuwocourses.php" method ="post">
-        <div class="courseButton">
-            <input type="submit" value="Get UWO Courses">
+    <div class='container'>
+        <div class='innerContainer'>
+            <form action="uwo/getuwocourses.php" method ="post">
+                <input type="submit" value="Get UWO Courses">
+            </form>
         </div>
-    </form>
-    <form action="uni/getuniversitys.php" method ="post">
-        <div class="uniButton">
-            <input type="submit" value="Get University's">
+        <div class='innerContainer'>
+            <form action="uni/getuniversitys.php" method ="post">
+                <input type="submit" value="Get University's">
+            </form>
         </div>
-    </form>
+    </div>
     <?php
         mysqli_close($connection);
     ?>
