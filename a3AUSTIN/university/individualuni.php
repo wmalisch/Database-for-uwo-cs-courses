@@ -13,11 +13,11 @@
             $provinceCode = $_POST["provinceCode"];
             $nickname = $_POST["nickname"];
             echo "<h1>" . $university . " Computer Science</h1>";
-            echo "<h2>Course and Basic Information</h2>";
+            echo "<h2>Course and Basic Uni Information</h2>";
             include '../header.php';
             echo "<hr>";
             echo "<h3>Basic University Information</h3>";
-            echo "<table style='width:30%' id='detailstable'>";
+            echo "<table style='width:30%; border: 1px solid black' id='detailstable'>";
             echo "<tr><th>Detail</th><th>Value</th></tr>";
             echo "<tr><td>University ID</td><td><h4>" . $uniId . "</h4></td></tr>";
             echo "<tr><td>Official Name</td><td><h4>" . $university . "</h4></td></tr>";
