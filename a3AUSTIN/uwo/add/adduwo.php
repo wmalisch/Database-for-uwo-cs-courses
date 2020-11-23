@@ -8,6 +8,7 @@
 <?php
     include '../../header.php';
     include '../../connectdb.php';
+    echo "<hr>";
     $number = $_POST["courseNumber"];
     $name = $_POST["courseName"];
     $weight = $_POST["weight"];
@@ -21,8 +22,7 @@
         echo"</form>";
         die("Error while trying to update UWO course " . mysqli_error($connection));
     }else{
-        header('Location: ../../index.php');
-        exit;
+        echo "<h2>Course Added!</h2>"
     }
 ?>
 </body>

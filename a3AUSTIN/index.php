@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>HOME PAGE</title>
-
+    <link rel="stylesheet" href="styles/index.css">
 </head>
 <body>
     <h1>Home Page</h1>
@@ -17,10 +17,10 @@
         Here you can take a look at UWO courses, other universities, and the other universities courses<br>
     </h3>
     <form action="uwo/getuwocourses.php" method ="post">
-        <input type="submit" value="Get UWO Courses">
+        <input type="submit" class="mainbutton" value="Get UWO Courses">
     </form>
     <form action="getuniversitys.php" method ="post">
-        <input type="submit" value="Get University's">
+        <input type="submit" class="mainbutton" value="Get University's">
     </form>
     <?php
         mysqli_close($connection);

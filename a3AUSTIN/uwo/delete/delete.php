@@ -8,6 +8,8 @@
 <h1>DELETE COMPLETE</h1>
 <?php
     include '../../connectdb.php';
+    include '../../header.php';
+    echo "<hr>";
     $number = $_POST["courseNumber"];
     $query = "DELETE FROM westernCourses where courseNumber='$number';"; 
         if(!mysqli_query($connection,$query)){
@@ -18,7 +20,7 @@
             echo"</form>";
             die("Error while trying to delete UWO course " . mysqli_error($connection));
         }else{
-            echo "delete should have worked";
+            echo "<h2>Course Deleted!</h2>";
         }
 ?>
 </body>
