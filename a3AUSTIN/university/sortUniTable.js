@@ -7,16 +7,16 @@ function check_direction(n) {
 
     // If the table is currently descending
     if(a.innerHTML.toLowerCase() > b.innerHTML.toLowerCase()){
-        if(n==0){
-            sort_asc_number();
+        if(n==3){
+            sort_asc_province();
         }else{
             sort_asc_name();
         }
 
     // If the table is ascending
     }else{
-        if(n==0){
-            sort_desc_number();
+        if(n==3){
+            sort_desc_province();
         }else{
             sort_desc_name();
         }
@@ -24,7 +24,7 @@ function check_direction(n) {
     }
 }
 
-function sort_asc_number() {
+function sort_asc_province() {
     var table, rows, a, b;
     var still_switching = true;
     table = document.getElementById('table');
@@ -33,8 +33,8 @@ function sort_asc_number() {
         rows = table.rows;
         for (var i = 1; i < (rows.length-1); i++){
 
-            a = rows[i].getElementsByTagName("td")[0];
-            b = rows[i+1].getElementsByTagName("td")[0];
+            a = rows[i].getElementsByTagName("td")[3];
+            b = rows[i+1].getElementsByTagName("td")[3];
             // Still descending
             if(a.innerHTML.toLowerCase() > b.innerHTML.toLowerCase()){
                 rows[i].parentNode.insertBefore(rows[i+1],rows[i]);
@@ -44,7 +44,7 @@ function sort_asc_number() {
     }
 }
 
-function sort_desc_number() {
+function sort_desc_province() {
     var table, rows, a, b;
     var still_switching = true;
     table = document.getElementById('table');
@@ -53,8 +53,8 @@ function sort_desc_number() {
         rows = table.rows;
         for (var i = 1; i < (rows.length-1); i++){
 
-            a = rows[i].getElementsByTagName("td")[0];
-            b = rows[i+1].getElementsByTagName("td")[0];
+            a = rows[i].getElementsByTagName("td")[3];
+            b = rows[i+1].getElementsByTagName("td")[3];
             // Still ascending
             if(a.innerHTML.toLowerCase() < b.innerHTML.toLowerCase()){
                 rows[i].parentNode.insertBefore(rows[i+1],rows[i]);
