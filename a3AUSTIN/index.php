@@ -17,10 +17,14 @@
         Here you can take a look at UWO courses, other universities, and the other universities courses<br>
     </h3>
     <form action="uwo/getuwocourses.php" method ="post">
-        <input type="submit" class="courseButton" value="Get UWO Courses">
+        <div class="courseButton">
+            <input type="submit" value="Get UWO Courses">
+        </div>
     </form>
     <form action="getuniversitys.php" method ="post">
-        <input type="submit" class="uniButton" value="Get University's">
+        <div class="uniButton">
+            <input type="submit" value="Get University's">
+        </div>
     </form>
     <?php
         mysqli_close($connection);
