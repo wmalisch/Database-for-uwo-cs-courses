@@ -43,8 +43,8 @@
             echo "</form>" . "</td>";
             echo "<td>" . $row["nickname"] . "</td>";
             echo "</tr>";
-        echo "</table>";
         }
+        echo "</table>";
         mysqli_close($connection);
     ?>
 </body>
