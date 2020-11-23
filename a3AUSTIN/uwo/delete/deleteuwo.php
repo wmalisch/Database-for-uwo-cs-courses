@@ -14,7 +14,7 @@
     $code = $_POST["courseCode"];
     echo "<h5>Are you sure you want to delete the western course: </h5>";
     echo "<h3>" . $number . "</h3>";
-    echo "<br>"
+    echo "<br>";
     echo "<h5>If it has an equivalency, it will be listed below: </h5>";
     echo "<h3>" . $code . "</h3>";
     echo "<br>";
