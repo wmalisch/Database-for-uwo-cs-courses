@@ -14,7 +14,7 @@
     <hr>
     <br>
     <?php
-        $query = "SELECT * FROM westernCourses as W LEFT JOIN equivalence as E on W.courseNumber=E.courseNumber";
+        $query = "SELECT westernCourses.courseNumber, courseName, weight, suffix, courseCode AS 'Equivalent Course' FROM westernCourses LEFT JOIN equivalence ON westernCourses.courseNumber=equivalence.courseNumber;";
         $result = mysqli_query($connection, $query);
         if(!result){
             die("Database query failed");
@@ -22,20 +22,20 @@
         echo "<table style='width:100%' id='table'>";
         echo "<tr>";
         echo "<th><button id='hnumber' onclick='check_direction(0)'>Course Number</button></th>";
-        echo "<th><button id='hname' onclick='check_direction(1)'>Course Name</button></th>";
+        echo "<th><button id='hname' onclick='check_direc tion(1)'>Course Name</button></th>";
         echo "<th>Course Weight</th>";
         echo "<th>Course Suffix</th>";
         echo "<th>Edit</th><th>Delete</th>";
         echo "</tr>";
         while($row = mysqli_fetch_assoc($result)){
-            var_dump($row);
             echo "<tr>";
             echo "<td>" . $row["courseNumber"] . "</td>";
             echo "<td>" . $row["courseName"] . "</td>";
             echo "<td>" . $row["weight"] . "</td>";
             echo "<td>" . $row["suffix"] . "</td>";
-            echo "<td>" . "<form action='deleteuwo.php' method='post'>";
-                echo "<button type='submit' value='" . $row["courseNumber"] . "'>" . $row["courseNumber"] . "</button>" . "</td>";
+            echo "<td>" . $row["courseCode"] . "</td>";
+            echo "<td>" . "<form action='deleteuwo.php' method='post'>";     
+                echo "<button type='submit' value='" . $row["courseNumber"] . "'>" . $row["courseNumber"] . " Equivalent to: " . $row["courseCode"] . "</button>" . "</td>";
             echo "</form>" . "</td>";
             echo "</tr>";
         }
@@ -46,4 +46,4 @@
         mysqli_close($connection);
     ?>
 </body>
-</html>m
+</html>
