@@ -33,7 +33,7 @@
             echo "<td>" . $row["courseName"] . "</td>";
             echo "<td>" . $row["weight"] . "</td>";
             echo "<td>" . $row["suffix"] . "</td>";
-            echo "<td>" . $row["courseCode"] . "</td>";
+            echo "<td>" . $row["Equivalent Course"] . "</td>";
             echo "<td>" . "<form action='deleteuwo.php' method='post'>";
             echo "<button type='submit' onclick='alert()' value='" . $row["courseNumber"] . "'>" . $row["courseNumber"] . " Equivalent to: " . $row["Equivalent Course"] . "</button>" . "</td>";
             echo "<div name='courseCode' value='" . $row["courseCode"] . "'></div>";
