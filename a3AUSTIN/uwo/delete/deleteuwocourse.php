@@ -34,7 +34,6 @@
             echo "<td>" . $row["weight"] . "</td>";
             echo "<td>" . $row["suffix"] . "</td>";
             echo "<td>" . $row["courseCode"] . "</td>";
-            if($row["courseCode"])
             echo "<td>" . "<form action='deleteuwo.php' method='post'>";     
                 echo "<button type='submit' onclick='alert()' value='" . $row["courseNumber"] . "'>" . $row["courseNumber"] . " Equivalent to: " . $row["Equivalent Course"] . "</button>" . "</td>";
             echo "</form>" . "</td>";
