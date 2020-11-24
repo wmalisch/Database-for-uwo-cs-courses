@@ -6,8 +6,8 @@
 </head>
 <body>
     <?php
-        echo "<h1>" . $_POST["outsideCourse"] "</h1>";
-        echo "<h1>" . $_POST["university"] "</h1>";
+        echo "<h1>" . $_POST["outsideCourse"] . "</h1>";
+        echo "<h1>" . $_POST["university"] . "</h1>";
     ?>
 </body>
 </html>
