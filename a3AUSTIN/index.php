@@ -86,7 +86,7 @@
                 </select>
                 <select name='outsideCourse'>
                     <?php
-                        $query = "SELECT courseCode, nickname, uniId FROM outsideCourses, university WHERE outsideCourses.uniId=university.uniId;";
+                        $query = "SELECT courseCode, nickname, outsideCourses.uniId FROM outsideCourses, university WHERE outsideCourses.uniId=university.uniId;";
                         $result = mysqli_query($connection, $query);
                         if(!result){
                             die("Database query failed");
