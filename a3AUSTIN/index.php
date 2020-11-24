@@ -27,6 +27,22 @@
                 <input type="submit" value="Get University's">
             </form>
         </div>
+        <div class='innerContainer' style='display: inline-block;'>
+            <form action="equiv/equivalencebydate.php" method='post'>
+                <select name='year'>
+
+                    <?php
+                        $i = 0;
+                        $year = date("Y");
+                        echo "<option value='" . $year . "'>" . $year . "</option>";
+                        while($i != 30){
+                            echo "<option value='" . $year-$i . "'>" . $year-$i . "</option>";
+                        }
+                    ?>
+                </select>
+                <button>Submit Date</button>
+            </form>
+        </div>
     </div>
     <?php
         mysqli_close($connection);

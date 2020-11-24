@@ -2,8 +2,7 @@
 <html>
 <head>
     <meta charset='utf-8'>
-    <title>UWO COURSES</title>
-    <script src="sortUWOTable.js"></script>
+    <title>UWO INDIVIDUAL COURSES</title>
 </head>
 <body>
     <?php

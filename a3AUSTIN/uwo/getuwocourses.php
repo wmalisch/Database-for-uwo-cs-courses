@@ -33,7 +33,7 @@
         echo "</tr>";
         while($row = mysqli_fetch_assoc($result)){
             echo "<tr>";
-            echo "<td>" . "<form action='equivalence.php' method='post'>";
+            echo "<td>" . "<form action='../equiv/equivalencebycourse.php' method='post'>";
                 echo "<button type='submit' name='courseNumber' value='" . $row["courseNumber"] . "'>" . $row["courseNumber"] . "</button>";
                 echo "<input type='hidden' name='courseName' value='" . $row["courseName"] . "'>";
                 echo "<input type='hidden' name='weight' value='" . $row["weight"] . "'>";
