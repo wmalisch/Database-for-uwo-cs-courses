@@ -18,7 +18,7 @@
         $query = "INSERT INTO equivalence VALUES('$uwoCourse', '$outsideCourse', '$uniId', '$date')";
         if(!mysqli_query($connection, $query)){
             $query = "UPDATE equivalence SET dateDecided='$date' WHERE courseNumber='$uwoCourse' AND courseCode='$outsideCourse';";
-            if(!mysqliquery($connection,$query)){
+            if(!mysqli_query($connection,$query)){
                 echo "<h1>Error, please try another entry.</h1>";
                 echo "<form action='../index.php' method='post'>";
                 echo "<input type='submit' value='Retry Entering Value'>";
