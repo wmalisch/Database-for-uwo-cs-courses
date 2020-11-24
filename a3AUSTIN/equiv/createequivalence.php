@@ -17,10 +17,25 @@
         $date = $_POST["year"] . "-" . $_POST["month"] . "-" . $_POST["day"];
         $query = "INSERT INTO equivalence VALUES('$uwoCourse', '$outsideCourse', '$uniId', '$date')";
         if(!mysqli_query($connection, $query)){
-            echo "<h1>Add Error!</h1>";
-            echo mysqli_error($connection);
-            echo $error;
+            $query = "UPDATE equivalence SET dateDecided='$date' WHERE courseNumber='$uwoCourse' AND courseCode='$outsideCourse';";
+            if(!mysqliquery($connection,$query)){
+                echo "<h1>Error, please try another entry.</h1>";
+                echo "<form action='../index.php' method='post'>";
+                echo "<input type='submit' value='Retry Entering Value'>";
+                echo"</form>";
+                die("Error while trying to update UWO course " . mysqli_error($connection));
+            }
+            echo "<h3>Looks like these two courses are already equivalent.</h3>";
+            echo "<h3>The date has been updated. Click the button below to be routed home. From there you can go check the equivalence page.</h3>";
+            echo "<form action='../index.php' method='post'>";
+            echo "<input type='submit' value='Home'>";
+            echo"</form>";
+            mysqli_close($connection);
+            die("Updated equivalence");
         }
+        
+        
+
     ?>
 </body>
 </html>
