@@ -80,6 +80,14 @@
             </form>
         </div>
     </div>
+    <br>
+    <div id='container' style='width:100%; text-align:center;'>
+        <div class='innerContainer' style='display: inline-block; border: 1px solid black;'>
+            <form action='university/noequivalence.php' method='post'>
+                <input type="submit" value="Get Universities with No Equivalences">
+            </form>
+        </div>
+    </div>
     <?php
         mysqli_close($connection);
     ?>

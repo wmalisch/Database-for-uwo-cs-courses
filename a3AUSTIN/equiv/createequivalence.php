@@ -38,8 +38,6 @@
         echo "<form action='../index.php' method='post'>";
         echo "<input type='submit' value='Home'>";
         echo"</form>";
-        
-
     ?>
 </body>
 </html>

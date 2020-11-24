@@ -22,7 +22,7 @@
         echo"</form>";
         die("Error while trying to update UWO course " . mysqli_error($connection));
     }else{
-        echo "<h2>Course Added!</h2>"
+        echo "<h2>Course Added!</h2>";
     }
     mysqli_close($connection);
 ?>
