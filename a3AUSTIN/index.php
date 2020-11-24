@@ -46,7 +46,7 @@
                 <select name='month'>
                     <?php
                         $i = 0;
-                        $month = date("M");
+                        $month = date("m");
                         echo "<option value='" . $month . "'>" . $month . "</option>";
                         while($i != 12){
                             $month = $month - 1;
