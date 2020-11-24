@@ -18,7 +18,8 @@
         $query = "INSERT INTO equivalence VALUES('$uwoCourse', '$outsideCourse', '$uniId', '$date')";
         if(!mysqli_query($connection, $query)){
             echo "<h1>Add Error!</h1>";
-        echo mysqli_error($connection);
+            echo mysqli_error($connection);
+            echo $error;
         }
     ?>
 </body>
