@@ -11,9 +11,12 @@
         include '../connectdb.php';
         include '../header.php';
         echo "<hr><br>";
-        
+
         echo "<h1>" . $_POST["outsideCourse"] . "</h1>";
         echo "<h1>" . $_POST["university"] . "</h1>";
+        echo "<h1>" . $_POST["year"] . "</h1>";
+        echo "<h1>" . $_POST["month"] . "</h1>";
+        echo "<h1>" . $_POST["day"] . "</h1>";
 
     ?>
 </body>

@@ -75,6 +75,7 @@
                     include 'selectdate.php';
                 ?>
                 <input id='university' name='university' type='hidden' value=''>
+                <br>
                 <button>Create</button>
             </form>
         </div>
