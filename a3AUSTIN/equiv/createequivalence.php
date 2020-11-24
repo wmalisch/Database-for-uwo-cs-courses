@@ -31,9 +31,13 @@
             echo "<input type='submit' value='Home'>";
             echo"</form>";
             mysqli_close($connection);
-            die("Updated equivalence");
+            die();
         }
-        echo "HEllo";
+        echo "<h1>Insert successfull!</h1>";
+        echo "<h3>Click the button below to be router to the home page where you can go and see the equivalence.</h3>"
+        echo "<form action='../index.php' method='post'>";
+        echo "<input type='submit' value='Home'>";
+        echo"</form>";
         
 
     ?>
