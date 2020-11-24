@@ -17,20 +17,19 @@
         Here you can take a look at UWO courses, other universities, and the other universities courses<br>
     </h3>
     <div id='container' style='width:100%; text-align:center;'>
-        <div class='innerContainer' style='display: inline-block;'>
+        <div class='innerContainer' style='display: inline-block; border: 1px solid black;'>
             <form action="uwo/getuwocourses.php" method ="post">
                 <input type="submit" value="Get UWO Courses">
             </form>
         </div>
-        <div class='innerContainer' style='display: inline-block;'>
+        <div class='innerContainer' style='display: inline-block; border: 1px solid black;'>
             <form action="university/getuniversitys.php" method ="post">
                 <input type="submit" value="Get University's">
             </form>
         </div>
-        <div class='innerContainer' style='display: inline-block;'>
+        <div class='innerContainer' style='display: inline-block; border: 1px solid black;'>
             <form action="equiv/equivalencebydate.php" method='post'>
                 <select name='year'>
-
                     <?php
                         $i = 0;
                         $year = date("Y");
@@ -41,6 +40,9 @@
                             $i = $i + 1;
                         }
                     ?>
+                </select>
+                <select name='day'>
+                        
                 </select>
                 <button>Submit Date</button>
             </form>
