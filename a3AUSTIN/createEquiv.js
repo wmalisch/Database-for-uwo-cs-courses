@@ -1,3 +1,7 @@
+function setDateSetUni(){
+    checkUni();
+}
+
 function checkUni() {
     var selected = document.getElementById('outsideCourse');
     var selected_string = selected.options[selected.selectedIndex].innerText;

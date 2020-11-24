@@ -11,13 +11,15 @@
         include '../connectdb.php';
         include '../header.php';
         echo "<hr><br>";
-
-        echo "<h1>" . $_POST["outsideCourse"] . "</h1>";
-        echo "<h1>" . $_POST["university"] . "</h1>";
-        echo "<h1>" . $_POST["year"] . "</h1>";
-        echo "<h1>" . $_POST["month"] . "</h1>";
-        echo "<h1>" . $_POST["day"] . "</h1>";
-
+        $uwoCourse = $_POST["uwoCourse"];
+        $outsideCourse = $_POST["outsideCourse"];
+        $uniId = $_POST["university"];
+        $date = $_POST["year"] . "-" . $_POST["month"] . "-" . $_POST["day"];
+        //$query = "INSERT INTO equivalence VALUES('$uwoCourse', '$outsideCourse', '$uniId', '$date')";
+        echo $uwoCourse;
+        echo $outsideCourse;
+        echo $uniId;
+        echo $date;
     ?>
 </body>
 </html>
