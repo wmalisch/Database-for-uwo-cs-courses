@@ -100,7 +100,7 @@
                         mysqli_free_result($result);
                     ?>
                 </select>
-                <input id='university' type='hidden'>
+                <input id='university' type='hidden' value=''>
                 <button>Create</button>
             </form>
         </div>
