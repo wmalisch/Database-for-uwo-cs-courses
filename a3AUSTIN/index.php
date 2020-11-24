@@ -70,7 +70,7 @@
     <div id='container' style='width:100%; text-align:center;'>
         <div class='innerContainer' style='display: inline-block; border: 1px solid black;'>
             <form action='equiv/createequivalence.php' method='post'>
-                <label>CREATE EQUIVALENCY</label>
+                <label>CREATE EQUIVALENCY:</label>
                 <select name='uwoCourse'>
                     <?php
                         $query = "SELECT courseNumber FROM westernCourses;";
@@ -79,11 +79,12 @@
                             die("Database query failed");
                         }
                         while($row = mysqli_fetch_assoc($result)){
-                            echo "<option value='" . $row["courseNumber"] . "'>" . $row["courseNumber"] . "</option>";
+                            echo "<option value='" . $row["courseNumber"] . "'>" . "UWO-" . $row["courseNumber"] . "</option>";
                         }
                         mysqli_free_result($result);
                     ?>
                 </select>
+                <label> with </label>
                 <select name='outsideCourse'>
                     <?php
                         $query = "SELECT courseCode, nickname, outsideCourses.uniId FROM outsideCourses, university WHERE outsideCourses.uniId=university.uniId;";
@@ -92,7 +93,7 @@
                             die("Database query failed");
                         }
                         while($row = mysqli_fetch_assoc($result)){
-                            echo "<option value='" . $row["courseCode"] . "'>" . $row["nickname"] . "-" . $row["uniId"] . "-" . $row["courseCode"] . "</option>";
+                            echo "<option value='" . $row["courseCode"] . "'>" . $row["uniId"] . "-" . $row["nickname"] . "-" . $row["courseCode"] . "</option>";
                         }
                         mysqli_free_result($result);
                     ?>
