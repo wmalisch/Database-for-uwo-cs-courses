@@ -26,6 +26,7 @@
         echo "<button type='submit' value='" . $number ."'>No, do not delete</button>";
     echo"</form>";
     echo "<br>";
+    mysqli_close($connection);
 ?>
 </body>
 </html>

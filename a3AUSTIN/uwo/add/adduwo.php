@@ -24,6 +24,7 @@
     }else{
         echo "<h2>Course Added!</h2>"
     }
+    mysqli_close($connection);
 ?>
 </body>
 </html>
