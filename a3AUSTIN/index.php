@@ -5,7 +5,7 @@
     <title>HOME PAGE</title>
     <script src="createEquiv.js"></script>
 </head>
-<body>
+<body onload='checkUni()'>
     <h1>Home Page</h1>
     <h2>UWO CS Courses & Equivalencies</h2>
     <?php
