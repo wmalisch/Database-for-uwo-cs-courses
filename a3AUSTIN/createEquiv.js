@@ -3,9 +3,9 @@ function setDateSetUni(){
     var selected_day = document.getElementById('day');
     var date = new Date();
     var month = date.getMonth();
-    var day = date.getDate();
+    var day = date.getDate() - 1;
     selected_month.selectedIndex = month;
-    selected_day.selectedIndex = day-1;
+    selected_day.selectedIndex = day;
     checkUni();
 }
 
