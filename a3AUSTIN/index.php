@@ -30,7 +30,7 @@
         <div class='innerContainer' style='display: inline-block; border: 1px solid black;'>
             <form action="equiv/equivalencebydate.php" method='post'>
                 <?php
-                    include 'selectdata.php'
+                    include 'selectdate.php';
                 ?>
                 <button>Submit Date</button>
             </form>
@@ -72,7 +72,7 @@
                 </select>
                 <br>
                 <?php
-                    include 'selectdata.php'
+                    include 'selectdate.php';
                 ?>
                 <input id='university' name='university' type='hidden' value=''>
                 <button>Create</button>
