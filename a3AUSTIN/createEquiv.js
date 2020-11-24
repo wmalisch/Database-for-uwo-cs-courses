@@ -1,7 +1,11 @@
 function setDateSetUni(){
-    
+    var selected_month = document.getElementById('month');
+    var selected_day = document.getElementById('day');
     var date = new Date();
     var month = date.getMonth();
+    var day = date.getDate();
+    selected_month.selectedIndex = month;
+    selected_day.selectedIndex = day;
     checkUni();
 }
 
