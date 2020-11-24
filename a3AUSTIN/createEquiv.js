@@ -1,4 +1,7 @@
 function setDateSetUni(){
+    
+    var date = new Date();
+    var month = date.getMonth();
     checkUni();
 }
 

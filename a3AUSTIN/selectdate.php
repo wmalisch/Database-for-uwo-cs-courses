@@ -1,5 +1,5 @@
 <label>Year: </label>
-<select name='year'>
+<select id='year' name='year'>
     <?php
         $i = 0;
         $year = date("Y");
@@ -12,7 +12,7 @@
     ?>
 </select>
 <label>Month: </label>
-<select name='month'>
+<select id='month' name='month'>
     <?php
         $i = 1;
         while($i != 13){
@@ -22,7 +22,7 @@
     ?>
 </select>
 <label>Day: </label>
-<select name='day'>
+<select id='day' name='day'>
     <?php
         $i = 1;
         while($i != 32){
