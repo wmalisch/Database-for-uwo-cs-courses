@@ -9,7 +9,7 @@
         $courseName = $_POST["courseName"];
         $courseNumber = $_POST["courseNumber"];
         $weight = $_POST["weight"];
-        echo "<h1>UWO Computer Science</h1>";
+        echo "<h1>UWO Equivalent Courses</h1>";
         echo "<h2>" . $courseNumber . " Details</h2>";
         include '../header.php';
         include '../connectdb.php';
