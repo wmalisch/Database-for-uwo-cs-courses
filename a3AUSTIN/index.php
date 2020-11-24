@@ -29,6 +29,7 @@
         </div>
         <div class='innerContainer' style='display: inline-block; border: 1px solid black;'>
             <form action="equiv/equivalencebydate.php" method='post'>
+                <label>Year: </label>
                 <select name='year'>
                     <?php
                         $i = 0;
@@ -41,8 +42,18 @@
                         }
                     ?>
                 </select>
-                <select name='day'>
-                        
+                <label>Month: </label>
+                <select name='month'>
+                    <?php
+                        $i = 0;
+                        $month = date("M");
+                        echo "<option value='" . $month . "'>" . $month . "</option>";
+                        while($i != 12){
+                            $month = $month - 1;
+                            echo "<option value='" . $month . "'>" . $month . "</option>";
+                            $i = $i + 1;
+                        }
+                    ?>
                 </select>
                 <button>Submit Date</button>
             </form>
