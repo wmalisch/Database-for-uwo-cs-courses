@@ -1,3 +1,4 @@
+// Set the current date as default when entering a new equivalence
 function setDateSetUni(){
     var selected_month = document.getElementById('month');
     var selected_day = document.getElementById('day');
@@ -9,6 +10,7 @@ function setDateSetUni(){
     checkUni();
 }
 
+// Get the uniId for posting the form to the get page
 function checkUni() {
     var selected = document.getElementById('outsideCourse');
     var selected_string = selected.options[selected.selectedIndex].innerText;
