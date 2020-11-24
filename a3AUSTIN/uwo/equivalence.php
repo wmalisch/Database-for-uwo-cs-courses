@@ -23,7 +23,7 @@
         echo "<tr><td>Weight</td><td>" . $weight . "</td></tr>";
         echo "</table><br>";
         echo "<h3>Equivalent Course Information</h3>";
-        $query = "SELECT officialName, courseName, equivalence.courseCode, weight, dateDecided FROM equivalence, outsideCourses, university WHERE courseNumber='cs1026' AND outsideCourses.courseCode=equivalence.courseCode AND outsideCourses.uniId=university.uniId AND equivalence.uniId=university.uniId AND equivalence.uniId=outsideCourses.uniId;"
+        $query = "SELECT officialName, courseName, equivalence.courseCode, weight, dateDecided FROM equivalence, outsideCourses, university WHERE courseNumber='$courseNumber' AND outsideCourses.courseCode=equivalence.courseCode AND outsideCourses.uniId=university.uniId AND equivalence.uniId=university.uniId AND equivalence.uniId=outsideCourses.uniId;";
         $result = mysqli_query($connection, $query);
         if(!result){
             die("Database query failed");
