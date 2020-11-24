@@ -73,7 +73,7 @@
                 <label>CREATE EQUIVALENCY</label>
                 <select name='uwoCourse'>
                     <?php
-                        $query = "SELECT courseNumber FROM westernCourses;"
+                        $query = "SELECT courseNumber FROM westernCourses;";
                         $result = mysqli_query($connection, $query);
                         if(!result){
                             die("Database query failed");
