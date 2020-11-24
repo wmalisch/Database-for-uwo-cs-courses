@@ -85,15 +85,17 @@
                     ?>
                 </select>
                 <label> with </label>
-                <select name='outsideCourse'>
+                <select id='outsideCourse' name='outsideCourse'>
                     <?php
                         $query = "SELECT courseCode, nickname, outsideCourses.uniId FROM outsideCourses, university WHERE outsideCourses.uniId=university.uniId;";
                         $result = mysqli_query($connection, $query);
                         if(!result){
                             die("Database query failed");
                         }
+                        $i = 1;
                         while($row = mysqli_fetch_assoc($result)){
-                            echo "<option value='" . $row["courseCode"] . "'>" . $row["uniId"] . "-" . $row["nickname"] . "-" . $row["courseCode"] . "</option>";
+                            echo "<option id='" . $i . "' value='" . $row["courseCode"] . "'>" . $row["uniId"] . "-" . $row["nickname"] . "-" . $row["courseCode"] . "</option>";
+                            $i++;
                         }
                         mysqli_free_result($result);
                     ?>
