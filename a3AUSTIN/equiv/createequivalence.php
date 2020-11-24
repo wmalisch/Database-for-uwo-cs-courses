@@ -33,7 +33,7 @@
             mysqli_close($connection);
             die("Updated equivalence");
         }
-        
+        echo "HEllo";
         
 
     ?>
