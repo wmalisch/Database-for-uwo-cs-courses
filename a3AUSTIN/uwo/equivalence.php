@@ -41,6 +41,7 @@
             echo "<td>" . $row["courseCode"] . "</td>";
             echo "<td>" . $row["courseName"] . "</td>";
             echo "<td>" . $row["weight"] . "</td>";
+            echo "<td>" . $row["dateDecided"] . "</td>";
             echo "</tr>";
         }
         echo "</table>";
