@@ -37,6 +37,7 @@
                         echo "<option value='" . $year . "'>" . $year . "</option>";
                         while($i != 30){
                             echo "<option value='" . $year-$i . "'>" . $year-$i . "</option>";
+                            $i++;
                         }
                     ?>
                 </select>
