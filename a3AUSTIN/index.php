@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>HOME PAGE</title>
-    <link rel="stylesheet" href="styles/index.css">
+    <script src="createEquiv.js"></script>
 </head>
 <body>
     <h1>Home Page</h1>
@@ -85,7 +85,7 @@
                     ?>
                 </select>
                 <label> with </label>
-                <select id='outsideCourse' name='outsideCourse'>
+                <select id='outsideCourse' name='outsideCourse' onchange='checkUni()'>
                     <?php
                         $query = "SELECT courseCode, nickname, outsideCourses.uniId FROM outsideCourses, university WHERE outsideCourses.uniId=university.uniId;";
                         $result = mysqli_query($connection, $query);
