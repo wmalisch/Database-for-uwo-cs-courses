@@ -5,7 +5,7 @@ function setDateSetUni(){
     var month = date.getMonth();
     var day = date.getDate();
     selected_month.selectedIndex = month;
-    selected_day.selectedIndex = day;
+    selected_day.selectedIndex = day-1;
     checkUni();
 }
 
