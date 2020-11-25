@@ -5,9 +5,9 @@
         <title>UNIVERSITY BY PROVINCE CODE</title>
     </head>
     <body>
+        <!-- Get list of university's by province code -->
         <?php
             $province = $_POST["provinceCode"];
-            
             echo "<h1>University's in " . $province . "</h1>";
             echo "<h2>Name Info</h2>";
             include '../connectdb.php';
@@ -28,6 +28,7 @@
                 echo "</tr>";
             }
             echo "</table>";
+            mysqli_free_result($result);
             mysqli_close($connection);
         ?>
     </body>

@@ -5,6 +5,7 @@
     <title>CREATE EQUIVALENCE</title>
 </head>
 <body>
+    <!-- Basic header details -->
     <h1>UWO Computer Science</h1>
     <h2>Add Equivalence</h2>
     <?php
@@ -15,8 +16,12 @@
         $outsideCourse = $_POST["outsideCourse"];
         $uniId = $_POST["university"];
         $date = $_POST["year"] . "-" . $_POST["month"] . "-" . $_POST["day"];
+
+        // Insert new equivalence
         $query = "INSERT INTO equivalence VALUES('$uwoCourse', '$outsideCourse', '$uniId', '$date')";
         if(!mysqli_query($connection, $query)){
+
+            // If this equivalence already exists, update it to the inputted date
             $query = "UPDATE equivalence SET dateDecided='$date' WHERE courseNumber='$uwoCourse' AND courseCode='$outsideCourse';";
             if(!mysqli_query($connection,$query)){
                 echo "<h1>Error, please try another entry.</h1>";
@@ -27,6 +32,8 @@
             }
             echo "<h3>Looks like these two courses are already equivalent.</h3>";
             echo "<h3>The date has been updated. Click the button below to be routed home. From there you can go check the equivalence page.</h3>";
+            
+            // Re route to the home page
             echo "<form action='../index.php' method='post'>";
             echo "<input type='submit' value='Home'>";
             echo"</form>";
@@ -35,6 +42,8 @@
         }
         echo "<h1>Insert successfull!</h1>";
         echo "<h3>Click the button below to be router to the home page where you can go and see the equivalence.</h3>";
+
+        // Reroute to the home page
         echo "<form action='../index.php' method='post'>";
         echo "<input type='submit' value='Home'>";
         echo"</form>";

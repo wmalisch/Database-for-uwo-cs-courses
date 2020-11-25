@@ -5,6 +5,8 @@
     <title>HOME PAGE</title>
     <script src="createEquiv.js"></script>
 </head>
+
+<!-- On load, make sure the current date and uniId are passed to their respective values -->
 <body onload='setDateSetUni()'>
     <h1>Home Page</h1>
     <h2>UWO CS Courses & Equivalencies</h2>
@@ -16,6 +18,8 @@
     <h3>
         Here you can take a look at UWO courses, other universities, and the other universities courses<br>
     </h3>
+
+    <!-- Display buttons for getting university's, getting uwo courses, and getting equivalencies before a certain date -->
     <div id='container' style='width:100%; text-align:center;'>
         <div class='innerContainer' style='display: inline-block; border: 1px solid black;'>
             <form action="uwo/getuwocourses.php" method ="post">
@@ -37,6 +41,8 @@
         </div>
     </div>
     <br>
+
+    <!-- Creating an equivalency between 2 existing courses -->
     <div id='container' style='width:100%; text-align:center;'>
         <div class='innerContainer' style='display: inline-block; border: 1px solid black;'>
             <form action='equiv/createequivalence.php' method='post'>
@@ -81,6 +87,8 @@
         </div>
     </div>
     <br>
+
+    <!-- Get university data for schools we have no course info on -->
     <div id='container' style='width:100%; text-align:center;'>
         <div class='innerContainer' style='display: inline-block; border: 1px solid black;'>
             <form action='university/nocourses.php' method='post'>
@@ -88,6 +96,8 @@
             </form>
         </div>
     </div>
+
+    <!-- Close connection -->
     <?php
         mysqli_close($connection);
     ?>

@@ -6,6 +6,8 @@
     </head>
     <body>
         <?php
+            
+            // Basic setup and header details
             include '../connectdb.php';
             $university = $_POST["officialName"];
             $uniId = $_POST["uniId"];
@@ -16,6 +18,8 @@
             echo "<h2>Course and Basic Uni Information</h2>";
             include '../header.php';
             echo "<hr>";
+
+            // Show all basic information about this university in a table
             echo "<h3>Basic University Information</h3>";
             echo "<table style='width:30%; border: 1px solid black; margin-left:auto; margin-right:auto' id='detailstable'>";
             echo "<tr><th>Detail</th><th>Value</th></tr>";
@@ -26,6 +30,8 @@
             echo "<tr><td>Nickname</td><td>" . $nickname . "</td></tr>";
             echo "</table>";
             echo "<br>";
+
+            // Get all information on the courses at this university
             echo "<h3>University Course Information</h3>";
             $query = "SELECT * FROM outsideCourses where uniId='$uniId'";
             $result = mysqli_query($connection, $query);

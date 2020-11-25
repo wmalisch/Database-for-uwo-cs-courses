@@ -1,3 +1,4 @@
+// Check if column is currently ascending or descending
 function check_direction(n) {
     var table, rows, a, b;
     table = document.getElementById('table');
@@ -24,6 +25,7 @@ function check_direction(n) {
     }
 }
 
+// Sort province column to be ascending
 function sort_asc_province() {
     var table, rows, a, b;
     var still_switching = true;
@@ -44,6 +46,7 @@ function sort_asc_province() {
     }
 }
 
+// Sort number column to be descending
 function sort_desc_province() {
     var table, rows, a, b;
     var still_switching = true;
@@ -64,6 +67,7 @@ function sort_desc_province() {
     }
 }
 
+// Sort name column to be ascending
 function sort_asc_name(){
     var table, rows, a, b;
     var still_switching = true;
@@ -84,6 +88,7 @@ function sort_asc_name(){
     }
 }
 
+// Sort name column to be descending
 function sort_desc_name(){
     var table, rows, a, b;
     var still_switching = true;

@@ -6,6 +6,7 @@
     <script src="sortUniTable.js"></script>
 </head>
 <body>
+    <!-- Basic header details -->
     <h1>UWO Computer Science</h1>
     <h2>University's</h2>
     <?php
@@ -14,6 +15,8 @@
     ?>
     <hr>
     <br>
+
+    <!-- Get all information on other university's -->
     <?php
         $query = "SELECT * FROM university ORDER BY provinceCode";
         $result = mysqli_query($connection, $query);
@@ -31,6 +34,8 @@
         while($row = mysqli_fetch_assoc($result)){
             echo "<tr>";
             echo "<td>" . $row["uniId"] . "</td>";
+
+            // Reroute to the individual university details page when user clicks university name
             echo "<td>" . "<form action='individualuni.php' method='post'>";
                 echo "<button type='submit' name='officialName' value='" . $row["officialName"] . "'>" . $row["officialName"] . "</button>";
                 echo "<input type='hidden' name='uniId' value='" . $row["uniId"] . "'>";
@@ -39,6 +44,8 @@
                 echo "<input type='hidden' name='nickname' value='" . $row["nickname"] . "'>";
             echo "</form>" . "</td>";
             echo "<td>" . $row["city"] . "</td>";
+
+            // Reroute to university by province page when university clicks province
             echo "<td>" . "<form action='provincecode.php' method='post'>";
                 echo "<button type='submit' name='provinceCode' value='" . $row["provinceCode"] . "'>" . $row["provinceCode"] . "</button>";
             echo "</form>" . "</td>";

@@ -6,6 +6,8 @@
 </head>
 <body>
     <?php
+
+        // Basic setup and header details
         $courseName = $_POST["courseName"];
         $courseNumber = $_POST["courseNumber"];
         $weight = $_POST["weight"];
@@ -14,6 +16,8 @@
         include '../header.php';
         include '../connectdb.php';
         echo "<hr>";
+
+        // Information on the uwo course selected
         echo "<h3>Basic Course Information</h3>";
         echo "<table style='width:30%;border: 1px solid black;margin-left:auto;margin-right:auto' id='equivtable'>";
         echo "<tr><th>Detail</th><th>Value</th></tr>";
@@ -27,6 +31,8 @@
         if(!result){
             die("Database query failed");
         }
+
+        // Details on the courses equivalent to the uwo course selected
         echo "<table style='width:80%;border: 1px solid black;margin-left:auto;margin-right:auto' id='equivcoursetable'>";
         echo "<tr>";
         echo "<th>University Name</th>";

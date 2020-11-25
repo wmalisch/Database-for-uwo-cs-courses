@@ -6,6 +6,7 @@
 </head>
 <body>
 <h1>Edit Complete!</h1>
+<!-- Make the edit. If it doesnt work, print error -->
 <?php
     include '../../connectdb.php';
     $number = $_POST["courseNumber"];

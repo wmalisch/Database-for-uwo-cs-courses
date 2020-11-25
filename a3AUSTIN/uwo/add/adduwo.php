@@ -5,6 +5,8 @@
     <title>ADD UWO COMPLETE</title>
 </head>
 <body>
+
+<!-- Add course. If there is an error, let user try again -->
 <?php
     include '../../header.php';
     include '../../connectdb.php';

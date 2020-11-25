@@ -5,6 +5,8 @@
     <title>DELETE UWO WARNING</title>
 </head>
 <body>
+
+<!-- Give the user a warning, letting them know that they can back out or delete the entry -->
 <?php
     echo "<h1>Delete Warning</h1>";
     include '../../header.php';
@@ -18,10 +20,14 @@
     echo "<h5>If it has an equivalency, it will be listed below: </h5>";
     echo "<h3>" . $code . "</h3>";
     echo "<br>";
+
+    // Confirmed delete
     echo "<form action='delete.php' method='post'>";
         echo "<button type='submit' name='courseNumber' value='" . $number ."'>Yes I am sure</button>";
     echo"</form>";
     echo "<br>";
+
+    // Cancel delete
     echo "<form action='deleteuwocourse.php' method='post'>";
         echo "<button type='submit' value='" . $number ."'>No, do not delete</button>";
     echo"</form>";

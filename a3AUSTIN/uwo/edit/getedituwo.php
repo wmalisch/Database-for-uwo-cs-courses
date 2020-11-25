@@ -6,12 +6,15 @@
 </head>
 <body>
 
+<!-- Basic header details -->
 <h1>Edit UWO Course</h1>
 <?php
     include '../../header.php';
     include '../../connectdb.php';
 ?>
 <hr>
+
+<!-- Query for details on particular course. Record new information and forward to edit page -->
 <?php
     $course = $_POST["courseNumber"];
     $query = "SELECT * FROM westernCourses WHERE courseNumber='$course'";
@@ -21,6 +24,8 @@
     }
     $data = mysqli_fetch_assoc($result);
     echo "<h3>You are editing: </h3><br>";
+
+    // Collect the information and then send it to the page where the edit is made
     echo "<form action='edituwo.php' method='post'>";
         echo "<h3 name='courseNumber' value='" . $course . "'>" . $course . "</h3><br>";
         echo "<input type='hidden' name='courseNumber' value='" . $course . "'>" . "<br>";
@@ -45,9 +50,7 @@
             </select><br><br>";
         
         echo "<input type='submit' value='Click here to finalize edit'>";
-    
     echo "</form>";
 ?>
-
 </body>
 </html>

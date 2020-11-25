@@ -6,6 +6,7 @@
     <script src="alert.js"></script>
 </head>
 <body>
+    <!-- Basic header details -->
     <h1>UWO Delete Courses</h1>
     <?php
         include '../../header.php';
@@ -13,6 +14,8 @@
     ?>
     <hr>
     <br>
+
+    <!-- Get all the instances of a course that can be deleted, reroute to the delete page when an option is selected -->
     <?php
         $query = "SELECT westernCourses.courseNumber, courseName, weight, suffix, courseCode AS 'Equivalent Course' FROM westernCourses LEFT JOIN equivalence ON westernCourses.courseNumber=equivalence.courseNumber;";
         $result = mysqli_query($connection, $query);
@@ -34,6 +37,8 @@
             echo "<td>" . $row["weight"] . "</td>";
             echo "<td>" . $row["suffix"] . "</td>";
             echo "<td>" . $row["Equivalent Course"] . "</td>";
+
+            // Reroute to delete page
             echo "<td>" . "<form action='deleteuwo.php' method='post'>";
             echo "<button type='submit' name='courseNumber' value='" . $row["courseNumber"] . "'>" . $row["courseNumber"] . " Equivalent to: " . $row["Equivalent Course"] . "</button>" . "</td>";
             echo "<input type='hidden' name='courseCode' value='" . $row["Equivalent Course"] . "'>";
@@ -41,9 +46,6 @@
             echo "</tr>";
         }
         echo "</table>";
-        mysqli_free_result($result);
-    ?>
-    <?php
         mysqli_free_result($result);
         mysqli_close($connection);
     ?>

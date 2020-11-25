@@ -7,6 +7,8 @@
 <body>
     <h1>UWO Equivalent Courses</h1>
     <?php
+
+        // Basic setup and header details
         $date = $_POST["year"] . "-" . $_POST["month"] . "-" . $_POST["day"];
         echo "<h2>Courses marked equivalent after" . $date .  "</h2>";
         include '../header.php';
@@ -17,6 +19,8 @@
         if(!result){
             die("Database query failed");
         }
+
+        // Details on the equivalences later than the inputted date
         echo "<table style='width:100%; border: 1px solid black' id='equivtable'>";
         echo "<tr>";
         echo "<th>UWO Course Number</th>";

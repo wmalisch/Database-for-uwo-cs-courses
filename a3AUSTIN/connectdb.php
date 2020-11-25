@@ -1,3 +1,4 @@
+<!-- Connect to database -->
 <?php
 $dbhost = "localhost";
 $dbuser = "root";

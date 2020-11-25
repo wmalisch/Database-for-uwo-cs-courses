@@ -6,6 +6,7 @@
     <script src="sortUniTable.js"></script>
 </head>
 <body>
+    <!-- Basic header details -->
     <h1>University's with No Courses Recorded</h1>
     <br>
     <?php
@@ -14,6 +15,8 @@
     ?>
     <hr>
     <br>
+
+    <!-- Show a table of all the university's with no courses -->
     <?php 
         $query = "SELECT distinct officialName, nickname FROM university, equivalence WHERE university.uniId NOT IN (SELECT outsideCourses.uniId FROM outsideCourses);";
         $result = mysqli_query($connection,$query);

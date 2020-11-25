@@ -6,6 +6,8 @@
 </head>
 <body>
 <h1>DELETE COMPLETE</h1>
+
+<!-- Delete course -->
 <?php
     include '../../connectdb.php';
     include '../../header.php';
